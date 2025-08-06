@@ -1,0 +1,144 @@
+CHEMICAL COMPOUND CLUSTER ANALYSIS REPORT
+==================================================
+
+DATASET OVERVIEW
+--------------------
+Total compounds analyzed: 79,492
+Total clusters identified: 8,094
+Total proteins with activity data: 357
+
+CLUSTER STATISTICS
+--------------------
+Average cluster size: 9.82
+Median cluster size: 4.00
+Largest cluster: 526 compounds
+Smallest cluster: 1 compounds
+Standard deviation: 19.80
+
+TOP 20 LARGEST CLUSTERS
+-------------------------
+ 1. Cluster   3232:   526 compounds
+ 2. Cluster   4278:   392 compounds
+ 3. Cluster   5472:   377 compounds
+ 4. Cluster   7711:   354 compounds
+ 5. Cluster    440:   353 compounds
+ 6. Cluster   3364:   282 compounds
+ 7. Cluster   2955:   280 compounds
+ 8. Cluster   5471:   260 compounds
+ 9. Cluster   4284:   239 compounds
+10. Cluster   2940:   233 compounds
+11. Cluster   4184:   203 compounds
+12. Cluster    113:   196 compounds
+13. Cluster     99:   191 compounds
+14. Cluster    576:   180 compounds
+15. Cluster   1964:   180 compounds
+16. Cluster   7458:   166 compounds
+17. Cluster   4283:   157 compounds
+18. Cluster     21:   156 compounds
+19. Cluster   2383:   155 compounds
+20. Cluster     97:   155 compounds
+
+PROTEIN ACTIVITY OVERVIEW
+-------------------------
+Top 20 proteins by number of active compounds:
+ 1. VEGFR2         :  6584 compounds
+ 2. PIK3CA         :  4282 compounds
+ 3. EGFR           :  3898 compounds
+ 4. JAK2(JH1domain-catalytic):  3897 compounds
+ 5. MTOR           :  3321 compounds
+ 6. p38-alpha      :  3097 compounds
+ 7. JAK1(JH1domain-catalytic):  2901 compounds
+ 8. MET            :  2757 compounds
+ 9. SYK            :  2753 compounds
+10. JAK3(JH1domain-catalytic):  2467 compounds
+11. PIK3CD         :  2435 compounds
+12. SRC            :  2406 compounds
+13. PIM1           :  2352 compounds
+14. ERK2           :  2299 compounds
+15. BRAF           :  2167 compounds
+16. GSK3B          :  2128 compounds
+17. FGFR1          :  2121 compounds
+18. AKT1           :  2092 compounds
+19. PIK3CG         :  2015 compounds
+20. AURKA          :  1960 compounds
+
+pIC50 STATISTICS
+----------------
+Total pIC50 measurements: 122,840
+
+Top 10 clusters by pIC50 measurement count:
+ 1. Cluster   3232: 2465 measurements, mean pIC50:   8.76
+ 2. Cluster   4278:  975 measurements, mean pIC50:   8.37
+ 3. Cluster   2093:  841 measurements, mean pIC50:   6.80
+ 4. Cluster     16:  794 measurements, mean pIC50:   7.00
+ 5. Cluster   5472:  749 measurements, mean pIC50:   8.61
+ 6. Cluster     21:  728 measurements, mean pIC50:   7.96
+ 7. Cluster   3364:  507 measurements, mean pIC50:   8.62
+ 8. Cluster    440:  506 measurements, mean pIC50:   8.65
+ 9. Cluster   4284:  475 measurements, mean pIC50:   8.50
+10. Cluster   3697:  442 measurements, mean pIC50:   9.57
+
+CLUSTER-PROTEIN RELATIONSHIPS
+------------------------------
+Analysis of how chemical similarity clusters relate to protein activity:
+
+Cluster 3232 (526 compounds):
+  Total activities: 2465
+  Most active proteins:
+    FGFR1: 511 compounds (97.1%)
+    FGFR3: 509 compounds (96.8%)
+    FGFR2: 507 compounds (96.4%)
+
+Cluster 4278 (392 compounds):
+  Total activities: 975
+  Most active proteins:
+    JAK1(JH1domain-catalytic): 373 compounds (95.2%)
+    JAK2(JH1domain-catalytic): 360 compounds (91.8%)
+    JAK3(JH1domain-catalytic): 242 compounds (61.7%)
+
+Cluster 5472 (377 compounds):
+  Total activities: 749
+  Most active proteins:
+    PIK3CA: 376 compounds (99.7%)
+    MTOR: 373 compounds (98.9%)
+
+Cluster 7711 (354 compounds):
+  Total activities: 354
+  Most active proteins:
+    TRKA: 354 compounds (100.0%)
+
+Cluster 440 (353 compounds):
+  Total activities: 506
+  Most active proteins:
+    MET: 323 compounds (91.5%)
+    AXL: 28 compounds (7.9%)
+    VEGFR2: 26 compounds (7.4%)
+
+Cluster 3364 (282 compounds):
+  Total activities: 507
+  Most active proteins:
+    FGFR3: 264 compounds (93.6%)
+    VEGFR2: 243 compounds (86.2%)
+
+Cluster 2955 (280 compounds):
+  Total activities: 280
+  Most active proteins:
+    ERK2: 280 compounds (100.0%)
+
+Cluster 5471 (260 compounds):
+  Total activities: 263
+  Most active proteins:
+    MTOR: 260 compounds (100.0%)
+    PIK3CA: 3 compounds (1.2%)
+
+Cluster 4284 (239 compounds):
+  Total activities: 475
+  Most active proteins:
+    JAK1(JH1domain-catalytic): 239 compounds (100.0%)
+    JAK2(JH1domain-catalytic): 236 compounds (98.7%)
+
+Cluster 2940 (233 compounds):
+  Total activities: 233
+  Most active proteins:
+    ERK2: 233 compounds (100.0%)
+

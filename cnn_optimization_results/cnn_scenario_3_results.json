@@ -1,0 +1,39 @@
+{
+  "scenario": 3,
+  "best_params": {
+    "n_layers": 1,
+    "n_filters": 32,
+    "kernel_size": 5,
+    "learning_rate": 0.005
+  },
+  "best_value": 7.8325105131167785,
+  "n_trials": 5,
+  "study_name": "cnn_scenario_3_20250725_191409",
+  "timestamp": "2025-07-25T19:21:33.488262",
+  "search_space": {
+    "n_layers": [
+      1,
+      2,
+      3
+    ],
+    "n_filters": [
+      32,
+      64,
+      128
+    ],
+    "kernel_size": [
+      3,
+      5,
+      7
+    ],
+    "learning_rate": [
+      0.01,
+      0.001,
+      0.005,
+      0.0001,
+      5e-05
+    ],
+    "dropout": 0.25,
+    "batch_size": 32
+  }
+}

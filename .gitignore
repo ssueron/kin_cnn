@@ -1,0 +1,11 @@
+**__pycache__** 
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/

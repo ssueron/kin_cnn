@@ -1,0 +1,85 @@
+COMPREHENSIVE DATASET COMPARISON REPORT
+ChEMBL Pretraining vs PKIS2 Finetuning
+============================================================
+
+DATASET OVERVIEW
+--------------------
+CHEMBL Dataset:
+  Total compounds: 79,492
+  Columns: 358
+  Protein targets: 357
+  Most active targets: VEGFR2, PIK3CA, EGFR, JAK2(JH1domain-catalytic), MTOR
+
+PKIS2 Dataset:
+  Total compounds: 645
+  Columns: 357
+  Protein targets: 356
+
+MOLECULAR FINGERPRINT ANALYSIS (ECFP6)
+----------------------------------------
+CHEMBL:
+  Mean Tanimoto similarity: 0.1006
+  Diversity index: 0.8994
+  (Higher diversity = more chemically diverse dataset)
+
+PKIS2:
+  Mean Tanimoto similarity: 0.1087
+  Diversity index: 0.8913
+  (Higher diversity = more chemically diverse dataset)
+
+BEMIS-MURCKO SCAFFOLD ANALYSIS
+--------------------------------
+ChEMBL scaffolds: 30,936
+PKIS2 scaffolds: 369
+Shared scaffolds: 207
+ChEMBL unique: 30,729
+PKIS2 unique: 162
+
+Overlap percentages:
+  ChEMBL coverage: 0.67%
+  PKIS2 coverage: 56.10%
+  Jaccard index: 0.0067
+
+CHEMICAL SIMILARITY ANALYSIS
+----------------------------
+CHEMBL intra-dataset similarities:
+  Mean: 0.0992
+  Median: 0.0960
+  Std: 0.0325
+  Range: 0.0000 - 0.8661
+
+PKIS2 intra-dataset similarities:
+  Mean: 0.1087
+  Median: 0.0976
+  Std: 0.0629
+  Range: 0.0157 - 1.0000
+
+Inter-dataset similarities (ChEMBL vs PKIS2):
+  Mean: 0.0991
+  Median: 0.0955
+  Std: 0.0321
+  Range: 0.0093 - 1.0000
+
+CHEMICAL DIVERSITY COMPARISON
+------------------------------
+CHEMBL:
+  Scaffold diversity: 0.3892
+  Unique scaffolds: 30,936
+  Total compounds: 79,492
+  Scaffolds per compound: 0.3892
+
+PKIS2:
+  Scaffold diversity: 0.5721
+  Unique scaffolds: 369
+  Total compounds: 645
+  Scaffolds per compound: 0.5721
+
+CONCLUSIONS AND INSIGHTS
+------------------------
+• LOW scaffold overlap - datasets explore different chemical spaces
+• Both datasets show similar chemical diversity levels
+
+Generated files:
+  - dataset_comparison_chemical_space.png
+  - dataset_comparison_comprehensive.png
+  - dataset_comparison_report.txt
