@@ -1,0 +1,11 @@
+README.md
+setup.py
+deepclp/__init__.py
+deepclp/kinase_training.py
+deepclp/metrics.py
+deepclp/sequence_utils.py
+deepclp/training.py
+deepclp.egg-info/PKG-INFO
+deepclp.egg-info/SOURCES.txt
+deepclp.egg-info/dependency_links.txt
+deepclp.egg-info/top_level.txt

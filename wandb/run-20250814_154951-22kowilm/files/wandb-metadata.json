@@ -1,0 +1,40 @@
+{
+  "os": "Linux-6.8.0-65-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.10.12",
+  "startedAt": "2025-08-14T13:49:51.202840Z",
+  "program": "/home/postdoc/Documents/kinase_selectivity/kin_cnn/vegfr2_optuna.py",
+  "codePath": "vegfr2_optuna.py",
+  "codePathLocal": "vegfr2_optuna.py",
+  "git": {
+    "remote": "https://github.com/ssueron/kin_cnn.git",
+    "commit": "69729ddc98744e8bb82d39e87f9f3390c364bfd1"
+  },
+  "email": "sebastien.sueron@orange.fr",
+  "root": "/home/postdoc/Documents/kinase_selectivity/kin_cnn",
+  "host": "postdoc-bluechip",
+  "executable": "/usr/bin/python3",
+  "cpu_count": 12,
+  "cpu_count_logical": 20,
+  "gpu": "NVIDIA GeForce RTX 4070 SUPER",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "982820896768",
+      "used": "207223767040"
+    }
+  },
+  "memory": {
+    "total": "67151904768"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 4070 SUPER",
+      "memoryTotal": "12878610432",
+      "cudaCores": 7168,
+      "architecture": "Ada",
+      "uuid": "GPU-ff215cc7-dc1b-af08-a2a7-0971db1299ce"
+    }
+  ],
+  "cudaVersion": "12.9",
+  "writerId": "tqrwhehqafe27b00z04uf80micbot244"
+}

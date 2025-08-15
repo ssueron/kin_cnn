@@ -1,0 +1,12 @@
+{"time":"2025-08-14T17:04:28.677801719+02:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2025-08-14T17:04:28.9228495+02:00","level":"INFO","msg":"stream: created new stream","id":"nrhm3gdk"}
+{"time":"2025-08-14T17:04:28.922907153+02:00","level":"INFO","msg":"stream: started","id":"nrhm3gdk"}
+{"time":"2025-08-14T17:04:28.923010892+02:00","level":"INFO","msg":"writer: started","stream_id":"nrhm3gdk"}
+{"time":"2025-08-14T17:04:28.923117703+02:00","level":"INFO","msg":"handler: started","stream_id":"nrhm3gdk"}
+{"time":"2025-08-14T17:04:28.92316753+02:00","level":"INFO","msg":"sender: started","stream_id":"nrhm3gdk"}
+{"time":"2025-08-14T17:04:42.906833866+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-14T17:04:43.052156343+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 0-26, summary, console lines 2-58","runtime_seconds":0.144905652}],"total_operations":1}}
+{"time":"2025-08-14T17:04:43.11243383+02:00","level":"INFO","msg":"stream: closing","id":"nrhm3gdk"}
+{"time":"2025-08-14T17:04:43.112461323+02:00","level":"INFO","msg":"handler: closed","stream_id":"nrhm3gdk"}
+{"time":"2025-08-14T17:04:43.112574642+02:00","level":"INFO","msg":"sender: closed","stream_id":"nrhm3gdk"}
+{"time":"2025-08-14T17:04:43.112589085+02:00","level":"INFO","msg":"stream: closed","id":"nrhm3gdk"}

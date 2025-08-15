@@ -1,0 +1,71 @@
+W&B run initialized: olive-breeze-16
+W&B project URL: https://wandb.ai/s-sueron-eindhoven-university-of-technology/vegfr2-cnn/runs/yuxhzob8
+/home/postdoc/.local/lib/python3.10/site-packages/keras/src/layers/layer.py:970: UserWarning: Layer 'conv1d_42' (of type Conv1D) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+Epoch 1/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 8ms/step - loss: 80688120.0000 - root_mean_squared_error: 8982.6562 - val_loss: 1.5784 - val_root_mean_squared_error: 1.2563
+Epoch 2/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 8ms/step - loss: 2.1275 - root_mean_squared_error: 1.4586 - val_loss: 1.4203 - val_root_mean_squared_error: 1.1918
+Epoch 3/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 8ms/step - loss: 1.7007 - root_mean_squared_error: 1.3041 - val_loss: 1.3845 - val_root_mean_squared_error: 1.1766
+Epoch 4/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 8ms/step - loss: 1.3890 - root_mean_squared_error: 1.1786 - val_loss: 1.3795 - val_root_mean_squared_error: 1.1745
+Epoch 5/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 8ms/step - loss: 1.2896 - root_mean_squared_error: 1.1356 - val_loss: 1.3765 - val_root_mean_squared_error: 1.1733
+Epoch 6/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 8ms/step - loss: 1.2075 - root_mean_squared_error: 1.0989 - val_loss: 1.5258 - val_root_mean_squared_error: 1.2352
+Epoch 7/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 8ms/step - loss: 1.1999 - root_mean_squared_error: 1.0954 - val_loss: 1.4239 - val_root_mean_squared_error: 1.1933
+Epoch 8/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 8ms/step - loss: 1.1719 - root_mean_squared_error: 1.0825 - val_loss: 1.4270 - val_root_mean_squared_error: 1.1946
+Epoch 9/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 8ms/step - loss: 1.1762 - root_mean_squared_error: 1.0845 - val_loss: 1.4525 - val_root_mean_squared_error: 1.2052
+Epoch 10/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 8ms/step - loss: 1.1831 - root_mean_squared_error: 1.0877 - val_loss: 1.5324 - val_root_mean_squared_error: 1.2379
+Epoch 11/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 8ms/step - loss: 1.1768 - root_mean_squared_error: 1.0848 - val_loss: 1.4779 - val_root_mean_squared_error: 1.2157
+Epoch 12/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 8ms/step - loss: 1.1714 - root_mean_squared_error: 1.0823 - val_loss: 1.6387 - val_root_mean_squared_error: 1.2801
+Epoch 13/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 8ms/step - loss: 1.1750 - root_mean_squared_error: 1.0840 - val_loss: 1.4236 - val_root_mean_squared_error: 1.1931
+Epoch 14/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 8ms/step - loss: 1.1731 - root_mean_squared_error: 1.0831 - val_loss: 1.6880 - val_root_mean_squared_error: 1.2992
+Epoch 15/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 8ms/step - loss: 1.1665 - root_mean_squared_error: 1.0801 - val_loss: 1.4858 - val_root_mean_squared_error: 1.2189
+Epoch 16/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 8ms/step - loss: 1.1703 - root_mean_squared_error: 1.0818 - val_loss: 1.6189 - val_root_mean_squared_error: 1.2723
+Epoch 17/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 8ms/step - loss: 1.1748 - root_mean_squared_error: 1.0839 - val_loss: 1.5891 - val_root_mean_squared_error: 1.2606
+Epoch 18/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 7ms/step - loss: 1.1716 - root_mean_squared_error: 1.0824 - val_loss: 2.0053 - val_root_mean_squared_error: 1.4161
+Epoch 19/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 7ms/step - loss: 1.1655 - root_mean_squared_error: 1.0796 - val_loss: 1.6146 - val_root_mean_squared_error: 1.2707
+Epoch 20/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 7ms/step - loss: 1.1713 - root_mean_squared_error: 1.0823 - val_loss: 1.8321 - val_root_mean_squared_error: 1.3536
+Epoch 21/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 7ms/step - loss: 1.1740 - root_mean_squared_error: 1.0835 - val_loss: 1.6610 - val_root_mean_squared_error: 1.2888
+Epoch 22/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 7ms/step - loss: 1.1684 - root_mean_squared_error: 1.0809 - val_loss: 1.8005 - val_root_mean_squared_error: 1.3418
+Epoch 23/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 8ms/step - loss: 1.1726 - root_mean_squared_error: 1.0829 - val_loss: 1.7571 - val_root_mean_squared_error: 1.3255
+Epoch 24/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 7ms/step - loss: 1.1606 - root_mean_squared_error: 1.0773 - val_loss: 1.7168 - val_root_mean_squared_error: 1.3103
+Epoch 25/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 7ms/step - loss: 1.1621 - root_mean_squared_error: 1.0780 - val_loss: 1.4958 - val_root_mean_squared_error: 1.2230
+Epoch 26/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 7ms/step - loss: 1.1768 - root_mean_squared_error: 1.0848 - val_loss: 1.7241 - val_root_mean_squared_error: 1.3131
+Epoch 27/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 7ms/step - loss: 1.1748 - root_mean_squared_error: 1.0839 - val_loss: 1.6993 - val_root_mean_squared_error: 1.3036
+Epoch 28/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 7ms/step - loss: 1.1675 - root_mean_squared_error: 1.0805 - val_loss: 1.7310 - val_root_mean_squared_error: 1.3157
+Epoch 29/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 7ms/step - loss: 1.1717 - root_mean_squared_error: 1.0825 - val_loss: 2.0226 - val_root_mean_squared_error: 1.4222
+Epoch 30/300
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 7ms/step - loss: 1.1846 - root_mean_squared_error: 1.0884 - val_loss: 1.6466 - val_root_mean_squared_error: 1.2832
+/home/postdoc/.local/lib/python3.10/site-packages/keras/src/layers/layer.py:970: UserWarning: Layer 'conv1d_42' (of type Conv1D) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+[1m16/16[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 2ms/step
+/home/postdoc/Documents/kinase_selectivity/kin_cnn/deepclp/models/single_kinase_cnn.py:32: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  'pearson_r': pearsonr(y_true, y_pred)[0],
+/home/postdoc/Documents/kinase_selectivity/kin_cnn/deepclp/models/single_kinase_cnn.py:33: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  'spearman_r': spearmanr(y_true, y_pred)[0]

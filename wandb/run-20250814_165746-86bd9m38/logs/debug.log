@@ -1,0 +1,23 @@
+2025-08-14 16:57:46,829 INFO    MainThread:120337 [wandb_init.py:setup_run_log_directory():703] Logging user logs to /home/postdoc/Documents/kinase_selectivity/kin_cnn/wandb/run-20250814_165746-86bd9m38/logs/debug.log
+2025-08-14 16:57:46,829 INFO    MainThread:120337 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to /home/postdoc/Documents/kinase_selectivity/kin_cnn/wandb/run-20250814_165746-86bd9m38/logs/debug-internal.log
+2025-08-14 16:57:46,829 INFO    MainThread:120337 [wandb_init.py:init():830] calling init triggers
+2025-08-14 16:57:46,829 INFO    MainThread:120337 [wandb_init.py:init():835] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.0009708340417378962, 'epochs': 300, 'batch_size': 32, 'embedding_dim': 256, 'n_layers': 2, 'kernel_size': 9, 'n_filters': 32, 'dense_layer_size': 512, 'dropout': 0.32995464542059005, '_wandb': {}}
+2025-08-14 16:57:46,829 INFO    MainThread:120337 [wandb_init.py:init():871] starting backend
+2025-08-14 16:57:46,829 INFO    MainThread:120337 [wandb_init.py:init():874] sending inform_init request
+2025-08-14 16:57:46,830 INFO    MainThread:120337 [wandb_init.py:init():882] backend started and connected
+2025-08-14 16:57:46,830 INFO    MainThread:120337 [wandb_init.py:init():953] updated telemetry
+2025-08-14 16:57:46,833 INFO    MainThread:120337 [wandb_init.py:init():977] communicating run to backend with 90.0 second timeout
+2025-08-14 16:57:47,298 INFO    MainThread:120337 [wandb_init.py:init():1029] starting run threads in backend
+2025-08-14 16:57:47,360 INFO    MainThread:120337 [wandb_run.py:_console_start():2494] atexit reg
+2025-08-14 16:57:47,360 INFO    MainThread:120337 [wandb_run.py:_redirect():2342] redirect: wrap_raw
+2025-08-14 16:57:47,361 INFO    MainThread:120337 [wandb_run.py:_redirect():2411] Wrapping output streams.
+2025-08-14 16:57:47,361 INFO    MainThread:120337 [wandb_run.py:_redirect():2434] Redirects installed.
+2025-08-14 16:57:47,361 INFO    MainThread:120337 [wandb_init.py:init():1075] run started, returning control to user process
+2025-08-14 16:58:19,093 INFO    MainThread:120337 [wandb_run.py:_finish():2260] finishing run s-sueron-eindhoven-university-of-technology/vegfr2-cnn/86bd9m38
+2025-08-14 16:58:19,094 INFO    MainThread:120337 [wandb_run.py:_atexit_cleanup():2459] got exitcode: 0
+2025-08-14 16:58:19,094 INFO    MainThread:120337 [wandb_run.py:_restore():2441] restore
+2025-08-14 16:58:19,094 INFO    MainThread:120337 [wandb_run.py:_restore():2447] restore done
+2025-08-14 16:58:19,885 INFO    MainThread:120337 [wandb_run.py:_footer_history_summary_info():3895] rendering history
+2025-08-14 16:58:19,886 INFO    MainThread:120337 [wandb_run.py:_footer_history_summary_info():3927] rendering summary
+2025-08-14 16:58:19,886 INFO    MainThread:120337 [wandb_run.py:_footer_sync_info():3856] logging synced files

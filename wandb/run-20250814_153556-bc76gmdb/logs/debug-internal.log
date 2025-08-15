@@ -1,0 +1,12 @@
+{"time":"2025-08-14T15:35:56.309519715+02:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2025-08-14T15:35:56.543368659+02:00","level":"INFO","msg":"stream: created new stream","id":"bc76gmdb"}
+{"time":"2025-08-14T15:35:56.543383628+02:00","level":"INFO","msg":"stream: started","id":"bc76gmdb"}
+{"time":"2025-08-14T15:35:56.543399893+02:00","level":"INFO","msg":"sender: started","stream_id":"bc76gmdb"}
+{"time":"2025-08-14T15:35:56.543398779+02:00","level":"INFO","msg":"writer: started","stream_id":"bc76gmdb"}
+{"time":"2025-08-14T15:35:56.543412742+02:00","level":"INFO","msg":"handler: started","stream_id":"bc76gmdb"}
+{"time":"2025-08-14T15:36:17.456521041+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-14T15:36:17.694028037+02:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-08-14T15:36:17.695416116+02:00","level":"INFO","msg":"stream: closing","id":"bc76gmdb"}
+{"time":"2025-08-14T15:36:17.695421582+02:00","level":"INFO","msg":"handler: closed","stream_id":"bc76gmdb"}
+{"time":"2025-08-14T15:36:17.695458598+02:00","level":"INFO","msg":"sender: closed","stream_id":"bc76gmdb"}
+{"time":"2025-08-14T15:36:17.695461958+02:00","level":"INFO","msg":"stream: closed","id":"bc76gmdb"}

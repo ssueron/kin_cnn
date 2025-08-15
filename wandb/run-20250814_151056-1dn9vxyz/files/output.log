@@ -1,0 +1,26 @@
+W&B run initialized: desert-night-1
+W&B project URL: https://wandb.ai/s-sueron-eindhoven-university-of-technology/vegfr2-cnn/runs/1dn9vxyz
+/home/postdoc/.local/lib/python3.10/site-packages/keras/src/layers/layer.py:970: UserWarning: Layer 'conv1d' (of type Conv1D) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+Epoch 1/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 6.8502 - root_mean_squared_error: 2.6173 - val_loss: 7.6717 - val_root_mean_squared_error: 2.7698
+Epoch 2/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 2.0413 - root_mean_squared_error: 1.4287 - val_loss: 8.2825 - val_root_mean_squared_error: 2.8779
+Epoch 3/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 1.8546 - root_mean_squared_error: 1.3619 - val_loss: 11.2424 - val_root_mean_squared_error: 3.3530
+Epoch 4/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 1.6657 - root_mean_squared_error: 1.2906 - val_loss: 8.9308 - val_root_mean_squared_error: 2.9884
+Epoch 5/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 1.5179 - root_mean_squared_error: 1.2320 - val_loss: 8.4500 - val_root_mean_squared_error: 2.9069
+Epoch 6/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 1.5248 - root_mean_squared_error: 1.2348 - val_loss: 9.6206 - val_root_mean_squared_error: 3.1017
+Epoch 7/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 1.3880 - root_mean_squared_error: 1.1781 - val_loss: 9.4668 - val_root_mean_squared_error: 3.0768
+Epoch 8/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 1.3306 - root_mean_squared_error: 1.1535 - val_loss: 10.5139 - val_root_mean_squared_error: 3.2425
+Epoch 9/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 1.2651 - root_mean_squared_error: 1.1248 - val_loss: 10.9799 - val_root_mean_squared_error: 3.3136
+Epoch 10/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 1.1776 - root_mean_squared_error: 1.0852 - val_loss: 10.8013 - val_root_mean_squared_error: 3.2865
+Epoch 11/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 1.1362 - root_mean_squared_error: 1.0659 - val_loss: 11.8871 - val_root_mean_squared_error: 3.4478

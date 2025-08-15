@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: deepclp
+Version: 0.0.1
+Summary: Python package to quickly train bioactivity prediction models using deep chemical language processing.
+Home-page: https://github.com/molML/hitchhiker-guide-CLP
+Author: Rıza Özçelik
+Author-email: r.ozcelik@tue.nl
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+
+UNKNOWN
+

@@ -1,0 +1,74 @@
+_wandb:
+    value:
+        cli_version: 0.21.1
+        e:
+            nu55qtw9tp7e0jt3xbycaise4btqua7t:
+                codePath: train_vegfr2.py
+                codePathLocal: train_vegfr2.py
+                cpu_count: 12
+                cpu_count_logical: 20
+                cudaVersion: "12.9"
+                disk:
+                    /:
+                        total: "982820896768"
+                        used: "207146967040"
+                email: sebastien.sueron@orange.fr
+                executable: /usr/bin/python3
+                git:
+                    commit: 69729ddc98744e8bb82d39e87f9f3390c364bfd1
+                    remote: https://github.com/ssueron/kin_cnn.git
+                gpu: NVIDIA GeForce RTX 4070 SUPER
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 7168
+                      memoryTotal: "12878610432"
+                      name: NVIDIA GeForce RTX 4070 SUPER
+                      uuid: GPU-ff215cc7-dc1b-af08-a2a7-0971db1299ce
+                host: postdoc-bluechip
+                memory:
+                    total: "67151904768"
+                os: Linux-6.8.0-65-generic-x86_64-with-glibc2.35
+                program: /home/postdoc/Documents/kinase_selectivity/kin_cnn/train_vegfr2.py
+                python: CPython 3.10.12
+                root: /home/postdoc/Documents/kinase_selectivity/kin_cnn
+                startedAt: "2025-08-14T13:10:56.522245Z"
+                writerId: nu55qtw9tp7e0jt3xbycaise4btqua7t
+        m: []
+        python_version: 3.10.12
+        t:
+            "1":
+                - 1
+                - 2
+                - 5
+                - 53
+            "2":
+                - 1
+                - 2
+                - 5
+                - 53
+            "3":
+                - 2
+                - 16
+            "4": 3.10.12
+            "5": 0.21.1
+            "12": 0.21.1
+            "13": linux-x86_64
+batch_size:
+    value: 32
+dense_layer_size:
+    value: 128
+dropout:
+    value: 0.25
+embedding_dim:
+    value: 64
+epochs:
+    value: 100
+kernel_size:
+    value: 5
+learning_rate:
+    value: 0.001
+n_filters:
+    value: 64
+n_layers:
+    value: 2

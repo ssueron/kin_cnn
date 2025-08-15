@@ -1,0 +1,12 @@
+{"time":"2025-08-14T15:17:20.717235896+02:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2025-08-14T15:17:20.960482664+02:00","level":"INFO","msg":"stream: created new stream","id":"bulpcgmj"}
+{"time":"2025-08-14T15:17:20.960539852+02:00","level":"INFO","msg":"stream: started","id":"bulpcgmj"}
+{"time":"2025-08-14T15:17:20.960646617+02:00","level":"INFO","msg":"writer: started","stream_id":"bulpcgmj"}
+{"time":"2025-08-14T15:17:20.960696838+02:00","level":"INFO","msg":"handler: started","stream_id":"bulpcgmj"}
+{"time":"2025-08-14T15:17:20.960658103+02:00","level":"INFO","msg":"sender: started","stream_id":"bulpcgmj"}
+{"time":"2025-08-14T15:17:27.794173282+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-14T15:17:28.031905072+02:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-08-14T15:17:28.037635109+02:00","level":"INFO","msg":"stream: closing","id":"bulpcgmj"}
+{"time":"2025-08-14T15:17:28.037665406+02:00","level":"INFO","msg":"handler: closed","stream_id":"bulpcgmj"}
+{"time":"2025-08-14T15:17:28.037780591+02:00","level":"INFO","msg":"sender: closed","stream_id":"bulpcgmj"}
+{"time":"2025-08-14T15:17:28.037800186+02:00","level":"INFO","msg":"stream: closed","id":"bulpcgmj"}

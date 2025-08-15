@@ -1,0 +1,29 @@
+W&B run initialized: super-pond-42
+W&B project URL: https://wandb.ai/s-sueron-eindhoven-university-of-technology/vegfr2-cnn/runs/l2wwc3hu
+/home/postdoc/.local/lib/python3.10/site-packages/keras/src/layers/layer.py:970: UserWarning: Layer 'conv1d_34' (of type Conv1D) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+Epoch 1/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 6.4371 - root_mean_squared_error: 2.5371 - val_loss: 5.7298 - val_root_mean_squared_error: 2.3937
+Epoch 2/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 1.9135 - root_mean_squared_error: 1.3833 - val_loss: 8.0403 - val_root_mean_squared_error: 2.8355
+Epoch 3/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 1.6168 - root_mean_squared_error: 1.2715 - val_loss: 8.3595 - val_root_mean_squared_error: 2.8913
+Epoch 4/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 1.5076 - root_mean_squared_error: 1.2279 - val_loss: 8.1374 - val_root_mean_squared_error: 2.8526
+Epoch 5/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 1.3468 - root_mean_squared_error: 1.1605 - val_loss: 5.9628 - val_root_mean_squared_error: 2.4419
+Epoch 6/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 1.3653 - root_mean_squared_error: 1.1685 - val_loss: 6.1431 - val_root_mean_squared_error: 2.4785
+Epoch 7/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 1.2425 - root_mean_squared_error: 1.1147 - val_loss: 7.2812 - val_root_mean_squared_error: 2.6984
+Epoch 8/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 1.1380 - root_mean_squared_error: 1.0668 - val_loss: 8.9611 - val_root_mean_squared_error: 2.9935
+Epoch 9/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 1.0453 - root_mean_squared_error: 1.0224 - val_loss: 6.4938 - val_root_mean_squared_error: 2.5483
+Epoch 10/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 0.9664 - root_mean_squared_error: 0.9830 - val_loss: 6.3703 - val_root_mean_squared_error: 2.5240
+Epoch 11/100
+[1m150/150[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 4ms/step - loss: 0.9172 - root_mean_squared_error: 0.9577 - val_loss: 6.8662 - val_root_mean_squared_error: 2.6204
+/home/postdoc/.local/lib/python3.10/site-packages/keras/src/layers/layer.py:970: UserWarning: Layer 'conv1d_34' (of type Conv1D) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+[1m16/16[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 2ms/step

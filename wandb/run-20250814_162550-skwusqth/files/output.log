@@ -1,0 +1,471 @@
+W&B run initialized: earnest-bird-7
+W&B project URL: https://wandb.ai/s-sueron-eindhoven-university-of-technology/vegfr2-cnn/runs/skwusqth
+/home/postdoc/.local/lib/python3.10/site-packages/keras/src/layers/layer.py:970: UserWarning: Layer 'conv1d_15' (of type Conv1D) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+Epoch 1/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 7ms/step - loss: 15.9893 - root_mean_squared_error: 3.9987 - val_loss: 31.2161 - val_root_mean_squared_error: 5.5871
+Epoch 2/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.7556 - root_mean_squared_error: 1.3250 - val_loss: 33.2858 - val_root_mean_squared_error: 5.7694
+Epoch 3/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.5267 - root_mean_squared_error: 1.2356 - val_loss: 31.7884 - val_root_mean_squared_error: 5.6381
+Epoch 4/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.5246 - root_mean_squared_error: 1.2348 - val_loss: 29.5661 - val_root_mean_squared_error: 5.4375
+Epoch 5/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.4678 - root_mean_squared_error: 1.2115 - val_loss: 28.8042 - val_root_mean_squared_error: 5.3670
+Epoch 6/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.4883 - root_mean_squared_error: 1.2200 - val_loss: 31.3648 - val_root_mean_squared_error: 5.6004
+Epoch 7/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.3774 - root_mean_squared_error: 1.1736 - val_loss: 32.5929 - val_root_mean_squared_error: 5.7090
+Epoch 8/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.3894 - root_mean_squared_error: 1.1787 - val_loss: 31.2528 - val_root_mean_squared_error: 5.5904
+Epoch 9/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.3274 - root_mean_squared_error: 1.1521 - val_loss: 29.5673 - val_root_mean_squared_error: 5.4376
+Epoch 10/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 7ms/step - loss: 1.3671 - root_mean_squared_error: 1.1692 - val_loss: 29.4176 - val_root_mean_squared_error: 5.4238
+Epoch 11/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.2381 - root_mean_squared_error: 1.1127 - val_loss: 27.6177 - val_root_mean_squared_error: 5.2553
+Epoch 12/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.3147 - root_mean_squared_error: 1.1466 - val_loss: 26.5966 - val_root_mean_squared_error: 5.1572
+Epoch 13/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.1751 - root_mean_squared_error: 1.0840 - val_loss: 26.6286 - val_root_mean_squared_error: 5.1603
+Epoch 14/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.2683 - root_mean_squared_error: 1.1262 - val_loss: 28.5999 - val_root_mean_squared_error: 5.3479
+Epoch 15/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 7ms/step - loss: 1.3086 - root_mean_squared_error: 1.1439 - val_loss: 24.1049 - val_root_mean_squared_error: 4.9097
+Epoch 16/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 7ms/step - loss: 1.1631 - root_mean_squared_error: 1.0785 - val_loss: 24.2455 - val_root_mean_squared_error: 4.9240
+Epoch 17/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.1350 - root_mean_squared_error: 1.0654 - val_loss: 25.6126 - val_root_mean_squared_error: 5.0609
+Epoch 18/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.1976 - root_mean_squared_error: 1.0943 - val_loss: 23.6549 - val_root_mean_squared_error: 4.8636
+Epoch 19/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.1121 - root_mean_squared_error: 1.0546 - val_loss: 22.3097 - val_root_mean_squared_error: 4.7233
+Epoch 20/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.1191 - root_mean_squared_error: 1.0579 - val_loss: 23.2353 - val_root_mean_squared_error: 4.8203
+Epoch 21/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.1146 - root_mean_squared_error: 1.0557 - val_loss: 19.6627 - val_root_mean_squared_error: 4.4343
+Epoch 22/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.0555 - root_mean_squared_error: 1.0274 - val_loss: 19.6743 - val_root_mean_squared_error: 4.4356
+Epoch 23/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.1020 - root_mean_squared_error: 1.0497 - val_loss: 20.1951 - val_root_mean_squared_error: 4.4939
+Epoch 24/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.1402 - root_mean_squared_error: 1.0678 - val_loss: 18.2440 - val_root_mean_squared_error: 4.2713
+Epoch 25/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.0226 - root_mean_squared_error: 1.0113 - val_loss: 17.1078 - val_root_mean_squared_error: 4.1362
+Epoch 26/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.0326 - root_mean_squared_error: 1.0162 - val_loss: 17.2842 - val_root_mean_squared_error: 4.1574
+Epoch 27/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.0655 - root_mean_squared_error: 1.0322 - val_loss: 17.5781 - val_root_mean_squared_error: 4.1926
+Epoch 28/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.0684 - root_mean_squared_error: 1.0336 - val_loss: 14.6486 - val_root_mean_squared_error: 3.8273
+Epoch 29/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.9769 - root_mean_squared_error: 0.9884 - val_loss: 14.5793 - val_root_mean_squared_error: 3.8183
+Epoch 30/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.9977 - root_mean_squared_error: 0.9988 - val_loss: 13.2353 - val_root_mean_squared_error: 3.6380
+Epoch 31/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 1.0558 - root_mean_squared_error: 1.0275 - val_loss: 11.0776 - val_root_mean_squared_error: 3.3283
+Epoch 32/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.9726 - root_mean_squared_error: 0.9862 - val_loss: 11.3568 - val_root_mean_squared_error: 3.3700
+Epoch 33/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.9166 - root_mean_squared_error: 0.9574 - val_loss: 10.5529 - val_root_mean_squared_error: 3.2485
+Epoch 34/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 7ms/step - loss: 0.9742 - root_mean_squared_error: 0.9870 - val_loss: 11.2837 - val_root_mean_squared_error: 3.3591
+Epoch 35/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.9599 - root_mean_squared_error: 0.9797 - val_loss: 9.1086 - val_root_mean_squared_error: 3.0180
+Epoch 36/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.8988 - root_mean_squared_error: 0.9481 - val_loss: 10.2658 - val_root_mean_squared_error: 3.2040
+Epoch 37/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.9796 - root_mean_squared_error: 0.9898 - val_loss: 8.9616 - val_root_mean_squared_error: 2.9936
+Epoch 38/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.9144 - root_mean_squared_error: 0.9563 - val_loss: 8.9317 - val_root_mean_squared_error: 2.9886
+Epoch 39/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.9097 - root_mean_squared_error: 0.9538 - val_loss: 7.9297 - val_root_mean_squared_error: 2.8160
+Epoch 40/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.8765 - root_mean_squared_error: 0.9362 - val_loss: 7.6537 - val_root_mean_squared_error: 2.7665
+Epoch 41/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.9533 - root_mean_squared_error: 0.9764 - val_loss: 7.2110 - val_root_mean_squared_error: 2.6853
+Epoch 42/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.9250 - root_mean_squared_error: 0.9618 - val_loss: 7.2614 - val_root_mean_squared_error: 2.6947
+Epoch 43/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.8523 - root_mean_squared_error: 0.9232 - val_loss: 6.5329 - val_root_mean_squared_error: 2.5560
+Epoch 44/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.8984 - root_mean_squared_error: 0.9478 - val_loss: 5.8788 - val_root_mean_squared_error: 2.4246
+Epoch 45/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.8434 - root_mean_squared_error: 0.9184 - val_loss: 7.4322 - val_root_mean_squared_error: 2.7262
+Epoch 46/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.8539 - root_mean_squared_error: 0.9241 - val_loss: 6.2099 - val_root_mean_squared_error: 2.4920
+Epoch 47/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.8606 - root_mean_squared_error: 0.9277 - val_loss: 5.8852 - val_root_mean_squared_error: 2.4259
+Epoch 48/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.8520 - root_mean_squared_error: 0.9230 - val_loss: 4.7173 - val_root_mean_squared_error: 2.1719
+Epoch 49/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.8352 - root_mean_squared_error: 0.9139 - val_loss: 4.9999 - val_root_mean_squared_error: 2.2360
+Epoch 50/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.8734 - root_mean_squared_error: 0.9346 - val_loss: 4.7206 - val_root_mean_squared_error: 2.1727
+Epoch 51/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.8431 - root_mean_squared_error: 0.9182 - val_loss: 5.8420 - val_root_mean_squared_error: 2.4170
+Epoch 52/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.8122 - root_mean_squared_error: 0.9012 - val_loss: 4.8868 - val_root_mean_squared_error: 2.2106
+Epoch 53/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.8436 - root_mean_squared_error: 0.9185 - val_loss: 5.2280 - val_root_mean_squared_error: 2.2865
+Epoch 54/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.8708 - root_mean_squared_error: 0.9332 - val_loss: 4.9098 - val_root_mean_squared_error: 2.2158
+Epoch 55/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.8376 - root_mean_squared_error: 0.9152 - val_loss: 4.2695 - val_root_mean_squared_error: 2.0663
+Epoch 56/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.7955 - root_mean_squared_error: 0.8919 - val_loss: 4.0546 - val_root_mean_squared_error: 2.0136
+Epoch 57/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.7771 - root_mean_squared_error: 0.8816 - val_loss: 3.9105 - val_root_mean_squared_error: 1.9775
+Epoch 58/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.7989 - root_mean_squared_error: 0.8938 - val_loss: 3.6661 - val_root_mean_squared_error: 1.9147
+Epoch 59/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.8085 - root_mean_squared_error: 0.8992 - val_loss: 3.3083 - val_root_mean_squared_error: 1.8189
+Epoch 60/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.8118 - root_mean_squared_error: 0.9010 - val_loss: 3.9167 - val_root_mean_squared_error: 1.9791
+Epoch 61/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.7514 - root_mean_squared_error: 0.8669 - val_loss: 3.7312 - val_root_mean_squared_error: 1.9316
+Epoch 62/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.7833 - root_mean_squared_error: 0.8851 - val_loss: 2.4050 - val_root_mean_squared_error: 1.5508
+Epoch 63/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.8003 - root_mean_squared_error: 0.8946 - val_loss: 3.2155 - val_root_mean_squared_error: 1.7932
+Epoch 64/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.7674 - root_mean_squared_error: 0.8760 - val_loss: 3.2618 - val_root_mean_squared_error: 1.8061
+Epoch 65/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.7668 - root_mean_squared_error: 0.8757 - val_loss: 2.6829 - val_root_mean_squared_error: 1.6379
+Epoch 66/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.7715 - root_mean_squared_error: 0.8783 - val_loss: 2.1268 - val_root_mean_squared_error: 1.4584
+Epoch 67/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.7100 - root_mean_squared_error: 0.8426 - val_loss: 2.4886 - val_root_mean_squared_error: 1.5775
+Epoch 68/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.7295 - root_mean_squared_error: 0.8541 - val_loss: 2.4390 - val_root_mean_squared_error: 1.5617
+Epoch 69/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.7193 - root_mean_squared_error: 0.8481 - val_loss: 2.0252 - val_root_mean_squared_error: 1.4231
+Epoch 70/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.7090 - root_mean_squared_error: 0.8420 - val_loss: 2.1502 - val_root_mean_squared_error: 1.4663
+Epoch 71/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.6880 - root_mean_squared_error: 0.8294 - val_loss: 2.7637 - val_root_mean_squared_error: 1.6624
+Epoch 72/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.7203 - root_mean_squared_error: 0.8487 - val_loss: 2.1832 - val_root_mean_squared_error: 1.4776
+Epoch 73/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.6871 - root_mean_squared_error: 0.8289 - val_loss: 2.7889 - val_root_mean_squared_error: 1.6700
+Epoch 74/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.6960 - root_mean_squared_error: 0.8343 - val_loss: 2.2868 - val_root_mean_squared_error: 1.5122
+Epoch 75/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.6992 - root_mean_squared_error: 0.8362 - val_loss: 2.1089 - val_root_mean_squared_error: 1.4522
+Epoch 76/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.7084 - root_mean_squared_error: 0.8417 - val_loss: 2.2772 - val_root_mean_squared_error: 1.5090
+Epoch 77/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.6724 - root_mean_squared_error: 0.8200 - val_loss: 2.1434 - val_root_mean_squared_error: 1.4640
+Epoch 78/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.6610 - root_mean_squared_error: 0.8130 - val_loss: 2.8592 - val_root_mean_squared_error: 1.6909
+Epoch 79/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.6662 - root_mean_squared_error: 0.8162 - val_loss: 2.5884 - val_root_mean_squared_error: 1.6088
+Epoch 80/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.6447 - root_mean_squared_error: 0.8029 - val_loss: 2.9164 - val_root_mean_squared_error: 1.7077
+Epoch 81/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.6422 - root_mean_squared_error: 0.8014 - val_loss: 2.2203 - val_root_mean_squared_error: 1.4901
+Epoch 82/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.6383 - root_mean_squared_error: 0.7990 - val_loss: 2.1692 - val_root_mean_squared_error: 1.4728
+Epoch 83/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.6579 - root_mean_squared_error: 0.8111 - val_loss: 2.0356 - val_root_mean_squared_error: 1.4267
+Epoch 84/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.6562 - root_mean_squared_error: 0.8100 - val_loss: 2.1438 - val_root_mean_squared_error: 1.4642
+Epoch 85/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.6253 - root_mean_squared_error: 0.7908 - val_loss: 2.6465 - val_root_mean_squared_error: 1.6268
+Epoch 86/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.6452 - root_mean_squared_error: 0.8032 - val_loss: 1.9988 - val_root_mean_squared_error: 1.4138
+Epoch 87/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.6317 - root_mean_squared_error: 0.7948 - val_loss: 1.8930 - val_root_mean_squared_error: 1.3759
+Epoch 88/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 7ms/step - loss: 0.6145 - root_mean_squared_error: 0.7839 - val_loss: 2.0883 - val_root_mean_squared_error: 1.4451
+Epoch 89/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.6407 - root_mean_squared_error: 0.8005 - val_loss: 1.9486 - val_root_mean_squared_error: 1.3959
+Epoch 90/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.6066 - root_mean_squared_error: 0.7788 - val_loss: 2.0904 - val_root_mean_squared_error: 1.4458
+Epoch 91/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.6002 - root_mean_squared_error: 0.7747 - val_loss: 2.0899 - val_root_mean_squared_error: 1.4457
+Epoch 92/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5874 - root_mean_squared_error: 0.7664 - val_loss: 2.0936 - val_root_mean_squared_error: 1.4469
+Epoch 93/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.6112 - root_mean_squared_error: 0.7818 - val_loss: 2.1263 - val_root_mean_squared_error: 1.4582
+Epoch 94/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5927 - root_mean_squared_error: 0.7699 - val_loss: 2.0410 - val_root_mean_squared_error: 1.4286
+Epoch 95/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5890 - root_mean_squared_error: 0.7674 - val_loss: 1.9689 - val_root_mean_squared_error: 1.4032
+Epoch 96/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.6015 - root_mean_squared_error: 0.7755 - val_loss: 2.2131 - val_root_mean_squared_error: 1.4877
+Epoch 97/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5824 - root_mean_squared_error: 0.7632 - val_loss: 2.0325 - val_root_mean_squared_error: 1.4257
+Epoch 98/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5758 - root_mean_squared_error: 0.7588 - val_loss: 2.0538 - val_root_mean_squared_error: 1.4331
+Epoch 99/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5851 - root_mean_squared_error: 0.7649 - val_loss: 2.1502 - val_root_mean_squared_error: 1.4664
+Epoch 100/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5913 - root_mean_squared_error: 0.7690 - val_loss: 2.0140 - val_root_mean_squared_error: 1.4192
+Epoch 101/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5950 - root_mean_squared_error: 0.7713 - val_loss: 1.8641 - val_root_mean_squared_error: 1.3653
+Epoch 102/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5656 - root_mean_squared_error: 0.7520 - val_loss: 1.8757 - val_root_mean_squared_error: 1.3695
+Epoch 103/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5679 - root_mean_squared_error: 0.7536 - val_loss: 1.8591 - val_root_mean_squared_error: 1.3635
+Epoch 104/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5819 - root_mean_squared_error: 0.7628 - val_loss: 1.8954 - val_root_mean_squared_error: 1.3767
+Epoch 105/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5815 - root_mean_squared_error: 0.7625 - val_loss: 1.6710 - val_root_mean_squared_error: 1.2927
+Epoch 106/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5586 - root_mean_squared_error: 0.7474 - val_loss: 1.4096 - val_root_mean_squared_error: 1.1873
+Epoch 107/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.6017 - root_mean_squared_error: 0.7757 - val_loss: 1.7175 - val_root_mean_squared_error: 1.3105
+Epoch 108/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5778 - root_mean_squared_error: 0.7602 - val_loss: 1.5355 - val_root_mean_squared_error: 1.2392
+Epoch 109/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5550 - root_mean_squared_error: 0.7450 - val_loss: 1.8792 - val_root_mean_squared_error: 1.3708
+Epoch 110/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 7ms/step - loss: 0.5678 - root_mean_squared_error: 0.7536 - val_loss: 2.2985 - val_root_mean_squared_error: 1.5161
+Epoch 111/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5650 - root_mean_squared_error: 0.7516 - val_loss: 1.7374 - val_root_mean_squared_error: 1.3181
+Epoch 112/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5730 - root_mean_squared_error: 0.7570 - val_loss: 2.3114 - val_root_mean_squared_error: 1.5203
+Epoch 113/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5608 - root_mean_squared_error: 0.7489 - val_loss: 2.2705 - val_root_mean_squared_error: 1.5068
+Epoch 114/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5577 - root_mean_squared_error: 0.7468 - val_loss: 1.9472 - val_root_mean_squared_error: 1.3954
+Epoch 115/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5525 - root_mean_squared_error: 0.7433 - val_loss: 1.6723 - val_root_mean_squared_error: 1.2932
+Epoch 116/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5472 - root_mean_squared_error: 0.7397 - val_loss: 1.7168 - val_root_mean_squared_error: 1.3103
+Epoch 117/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5514 - root_mean_squared_error: 0.7426 - val_loss: 1.6964 - val_root_mean_squared_error: 1.3025
+Epoch 118/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5382 - root_mean_squared_error: 0.7336 - val_loss: 1.8521 - val_root_mean_squared_error: 1.3609
+Epoch 119/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5357 - root_mean_squared_error: 0.7319 - val_loss: 1.3429 - val_root_mean_squared_error: 1.1588
+Epoch 120/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5396 - root_mean_squared_error: 0.7345 - val_loss: 1.5809 - val_root_mean_squared_error: 1.2573
+Epoch 121/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5436 - root_mean_squared_error: 0.7373 - val_loss: 1.6292 - val_root_mean_squared_error: 1.2764
+Epoch 122/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5256 - root_mean_squared_error: 0.7250 - val_loss: 1.6644 - val_root_mean_squared_error: 1.2901
+Epoch 123/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5429 - root_mean_squared_error: 0.7368 - val_loss: 1.8298 - val_root_mean_squared_error: 1.3527
+Epoch 124/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 7ms/step - loss: 0.5288 - root_mean_squared_error: 0.7272 - val_loss: 1.8854 - val_root_mean_squared_error: 1.3731
+Epoch 125/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5396 - root_mean_squared_error: 0.7346 - val_loss: 1.4302 - val_root_mean_squared_error: 1.1959
+Epoch 126/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5443 - root_mean_squared_error: 0.7378 - val_loss: 1.5754 - val_root_mean_squared_error: 1.2551
+Epoch 127/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5299 - root_mean_squared_error: 0.7279 - val_loss: 1.8763 - val_root_mean_squared_error: 1.3698
+Epoch 128/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5347 - root_mean_squared_error: 0.7313 - val_loss: 1.7309 - val_root_mean_squared_error: 1.3156
+Epoch 129/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5403 - root_mean_squared_error: 0.7351 - val_loss: 1.4678 - val_root_mean_squared_error: 1.2115
+Epoch 130/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5382 - root_mean_squared_error: 0.7336 - val_loss: 1.5304 - val_root_mean_squared_error: 1.2371
+Epoch 131/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5286 - root_mean_squared_error: 0.7271 - val_loss: 1.5233 - val_root_mean_squared_error: 1.2342
+Epoch 132/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5399 - root_mean_squared_error: 0.7348 - val_loss: 1.8154 - val_root_mean_squared_error: 1.3474
+Epoch 133/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5298 - root_mean_squared_error: 0.7279 - val_loss: 1.6686 - val_root_mean_squared_error: 1.2918
+Epoch 134/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5288 - root_mean_squared_error: 0.7272 - val_loss: 1.8789 - val_root_mean_squared_error: 1.3707
+Epoch 135/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5352 - root_mean_squared_error: 0.7316 - val_loss: 1.5563 - val_root_mean_squared_error: 1.2475
+Epoch 136/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5293 - root_mean_squared_error: 0.7275 - val_loss: 1.6826 - val_root_mean_squared_error: 1.2972
+Epoch 137/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5426 - root_mean_squared_error: 0.7366 - val_loss: 1.4293 - val_root_mean_squared_error: 1.1955
+Epoch 138/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5141 - root_mean_squared_error: 0.7170 - val_loss: 1.5519 - val_root_mean_squared_error: 1.2457
+Epoch 139/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5398 - root_mean_squared_error: 0.7347 - val_loss: 1.3237 - val_root_mean_squared_error: 1.1505
+Epoch 140/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5395 - root_mean_squared_error: 0.7345 - val_loss: 1.4547 - val_root_mean_squared_error: 1.2061
+Epoch 141/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5177 - root_mean_squared_error: 0.7195 - val_loss: 1.5153 - val_root_mean_squared_error: 1.2310
+Epoch 142/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5248 - root_mean_squared_error: 0.7244 - val_loss: 1.6581 - val_root_mean_squared_error: 1.2877
+Epoch 143/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5229 - root_mean_squared_error: 0.7231 - val_loss: 1.5568 - val_root_mean_squared_error: 1.2477
+Epoch 144/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5086 - root_mean_squared_error: 0.7131 - val_loss: 1.4440 - val_root_mean_squared_error: 1.2017
+Epoch 145/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5186 - root_mean_squared_error: 0.7201 - val_loss: 1.4248 - val_root_mean_squared_error: 1.1937
+Epoch 146/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5352 - root_mean_squared_error: 0.7316 - val_loss: 1.6415 - val_root_mean_squared_error: 1.2812
+Epoch 147/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5163 - root_mean_squared_error: 0.7186 - val_loss: 1.3235 - val_root_mean_squared_error: 1.1504
+Epoch 148/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5159 - root_mean_squared_error: 0.7183 - val_loss: 1.4612 - val_root_mean_squared_error: 1.2088
+Epoch 149/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5001 - root_mean_squared_error: 0.7071 - val_loss: 1.4503 - val_root_mean_squared_error: 1.2043
+Epoch 150/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5146 - root_mean_squared_error: 0.7174 - val_loss: 1.6640 - val_root_mean_squared_error: 1.2900
+Epoch 151/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5180 - root_mean_squared_error: 0.7197 - val_loss: 1.5054 - val_root_mean_squared_error: 1.2269
+Epoch 152/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5118 - root_mean_squared_error: 0.7154 - val_loss: 1.4470 - val_root_mean_squared_error: 1.2029
+Epoch 153/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5097 - root_mean_squared_error: 0.7140 - val_loss: 1.7566 - val_root_mean_squared_error: 1.3254
+Epoch 154/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4812 - root_mean_squared_error: 0.6937 - val_loss: 1.6742 - val_root_mean_squared_error: 1.2939
+Epoch 155/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5158 - root_mean_squared_error: 0.7182 - val_loss: 1.5718 - val_root_mean_squared_error: 1.2537
+Epoch 156/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4993 - root_mean_squared_error: 0.7066 - val_loss: 1.4543 - val_root_mean_squared_error: 1.2059
+Epoch 157/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5094 - root_mean_squared_error: 0.7137 - val_loss: 1.6707 - val_root_mean_squared_error: 1.2926
+Epoch 158/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5040 - root_mean_squared_error: 0.7099 - val_loss: 1.4342 - val_root_mean_squared_error: 1.1976
+Epoch 159/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5010 - root_mean_squared_error: 0.7078 - val_loss: 1.5332 - val_root_mean_squared_error: 1.2382
+Epoch 160/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5229 - root_mean_squared_error: 0.7231 - val_loss: 1.5137 - val_root_mean_squared_error: 1.2303
+Epoch 161/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4890 - root_mean_squared_error: 0.6993 - val_loss: 1.4159 - val_root_mean_squared_error: 1.1899
+Epoch 162/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5022 - root_mean_squared_error: 0.7086 - val_loss: 1.3815 - val_root_mean_squared_error: 1.1754
+Epoch 163/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5186 - root_mean_squared_error: 0.7201 - val_loss: 1.3179 - val_root_mean_squared_error: 1.1480
+Epoch 164/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4904 - root_mean_squared_error: 0.7003 - val_loss: 1.5206 - val_root_mean_squared_error: 1.2331
+Epoch 165/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5067 - root_mean_squared_error: 0.7118 - val_loss: 1.5290 - val_root_mean_squared_error: 1.2365
+Epoch 166/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4913 - root_mean_squared_error: 0.7009 - val_loss: 1.5532 - val_root_mean_squared_error: 1.2463
+Epoch 167/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4939 - root_mean_squared_error: 0.7028 - val_loss: 1.3658 - val_root_mean_squared_error: 1.1687
+Epoch 168/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4837 - root_mean_squared_error: 0.6955 - val_loss: 1.7440 - val_root_mean_squared_error: 1.3206
+Epoch 169/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4904 - root_mean_squared_error: 0.7003 - val_loss: 1.3765 - val_root_mean_squared_error: 1.1733
+Epoch 170/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4814 - root_mean_squared_error: 0.6938 - val_loss: 1.6653 - val_root_mean_squared_error: 1.2905
+Epoch 171/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4918 - root_mean_squared_error: 0.7013 - val_loss: 1.4376 - val_root_mean_squared_error: 1.1990
+Epoch 172/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4991 - root_mean_squared_error: 0.7065 - val_loss: 1.3232 - val_root_mean_squared_error: 1.1503
+Epoch 173/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5153 - root_mean_squared_error: 0.7179 - val_loss: 1.2874 - val_root_mean_squared_error: 1.1347
+Epoch 174/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4871 - root_mean_squared_error: 0.6979 - val_loss: 1.6096 - val_root_mean_squared_error: 1.2687
+Epoch 175/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4992 - root_mean_squared_error: 0.7065 - val_loss: 1.4736 - val_root_mean_squared_error: 1.2139
+Epoch 176/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4826 - root_mean_squared_error: 0.6947 - val_loss: 1.3699 - val_root_mean_squared_error: 1.1704
+Epoch 177/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4919 - root_mean_squared_error: 0.7014 - val_loss: 1.3482 - val_root_mean_squared_error: 1.1611
+Epoch 178/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4874 - root_mean_squared_error: 0.6981 - val_loss: 1.4337 - val_root_mean_squared_error: 1.1974
+Epoch 179/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4746 - root_mean_squared_error: 0.6889 - val_loss: 1.5415 - val_root_mean_squared_error: 1.2416
+Epoch 180/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4799 - root_mean_squared_error: 0.6927 - val_loss: 1.4970 - val_root_mean_squared_error: 1.2235
+Epoch 181/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5057 - root_mean_squared_error: 0.7111 - val_loss: 1.5203 - val_root_mean_squared_error: 1.2330
+Epoch 182/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5000 - root_mean_squared_error: 0.7071 - val_loss: 1.3688 - val_root_mean_squared_error: 1.1700
+Epoch 183/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4901 - root_mean_squared_error: 0.7001 - val_loss: 1.3937 - val_root_mean_squared_error: 1.1806
+Epoch 184/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4892 - root_mean_squared_error: 0.6994 - val_loss: 1.3860 - val_root_mean_squared_error: 1.1773
+Epoch 185/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4717 - root_mean_squared_error: 0.6868 - val_loss: 1.3737 - val_root_mean_squared_error: 1.1721
+Epoch 186/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 7ms/step - loss: 0.4902 - root_mean_squared_error: 0.7001 - val_loss: 1.2553 - val_root_mean_squared_error: 1.1204
+Epoch 187/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.5024 - root_mean_squared_error: 0.7088 - val_loss: 1.4233 - val_root_mean_squared_error: 1.1930
+Epoch 188/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4964 - root_mean_squared_error: 0.7046 - val_loss: 1.2751 - val_root_mean_squared_error: 1.1292
+Epoch 189/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4718 - root_mean_squared_error: 0.6869 - val_loss: 1.3847 - val_root_mean_squared_error: 1.1767
+Epoch 190/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4811 - root_mean_squared_error: 0.6936 - val_loss: 1.3943 - val_root_mean_squared_error: 1.1808
+Epoch 191/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4845 - root_mean_squared_error: 0.6961 - val_loss: 1.4418 - val_root_mean_squared_error: 1.2008
+Epoch 192/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4801 - root_mean_squared_error: 0.6929 - val_loss: 1.2821 - val_root_mean_squared_error: 1.1323
+Epoch 193/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4718 - root_mean_squared_error: 0.6869 - val_loss: 1.5070 - val_root_mean_squared_error: 1.2276
+Epoch 194/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4764 - root_mean_squared_error: 0.6902 - val_loss: 1.4465 - val_root_mean_squared_error: 1.2027
+Epoch 195/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4742 - root_mean_squared_error: 0.6886 - val_loss: 1.4001 - val_root_mean_squared_error: 1.1832
+Epoch 196/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4783 - root_mean_squared_error: 0.6916 - val_loss: 1.3203 - val_root_mean_squared_error: 1.1490
+Epoch 197/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 7ms/step - loss: 0.4617 - root_mean_squared_error: 0.6795 - val_loss: 1.5268 - val_root_mean_squared_error: 1.2356
+Epoch 198/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4908 - root_mean_squared_error: 0.7005 - val_loss: 1.2542 - val_root_mean_squared_error: 1.1199
+Epoch 199/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4890 - root_mean_squared_error: 0.6992 - val_loss: 1.1433 - val_root_mean_squared_error: 1.0692
+Epoch 200/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4598 - root_mean_squared_error: 0.6781 - val_loss: 1.1686 - val_root_mean_squared_error: 1.0810
+Epoch 201/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4711 - root_mean_squared_error: 0.6864 - val_loss: 1.1194 - val_root_mean_squared_error: 1.0580
+Epoch 202/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4941 - root_mean_squared_error: 0.7029 - val_loss: 1.2937 - val_root_mean_squared_error: 1.1374
+Epoch 203/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4713 - root_mean_squared_error: 0.6865 - val_loss: 1.2552 - val_root_mean_squared_error: 1.1204
+Epoch 204/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4805 - root_mean_squared_error: 0.6932 - val_loss: 1.3185 - val_root_mean_squared_error: 1.1483
+Epoch 205/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4613 - root_mean_squared_error: 0.6792 - val_loss: 1.3156 - val_root_mean_squared_error: 1.1470
+Epoch 206/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4710 - root_mean_squared_error: 0.6863 - val_loss: 1.2019 - val_root_mean_squared_error: 1.0963
+Epoch 207/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4717 - root_mean_squared_error: 0.6868 - val_loss: 1.1119 - val_root_mean_squared_error: 1.0545
+Epoch 208/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4649 - root_mean_squared_error: 0.6818 - val_loss: 1.2291 - val_root_mean_squared_error: 1.1086
+Epoch 209/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 7ms/step - loss: 0.4680 - root_mean_squared_error: 0.6841 - val_loss: 1.2126 - val_root_mean_squared_error: 1.1012
+Epoch 210/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4734 - root_mean_squared_error: 0.6880 - val_loss: 1.1894 - val_root_mean_squared_error: 1.0906
+Epoch 211/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4767 - root_mean_squared_error: 0.6904 - val_loss: 1.1199 - val_root_mean_squared_error: 1.0582
+Epoch 212/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4579 - root_mean_squared_error: 0.6767 - val_loss: 1.1776 - val_root_mean_squared_error: 1.0852
+Epoch 213/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4586 - root_mean_squared_error: 0.6772 - val_loss: 1.3749 - val_root_mean_squared_error: 1.1725
+Epoch 214/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4544 - root_mean_squared_error: 0.6741 - val_loss: 1.2557 - val_root_mean_squared_error: 1.1206
+Epoch 215/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4703 - root_mean_squared_error: 0.6858 - val_loss: 1.2169 - val_root_mean_squared_error: 1.1031
+Epoch 216/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4598 - root_mean_squared_error: 0.6781 - val_loss: 1.1922 - val_root_mean_squared_error: 1.0919
+Epoch 217/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4709 - root_mean_squared_error: 0.6862 - val_loss: 1.2139 - val_root_mean_squared_error: 1.1018
+Epoch 218/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4731 - root_mean_squared_error: 0.6878 - val_loss: 1.1182 - val_root_mean_squared_error: 1.0574
+Epoch 219/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4566 - root_mean_squared_error: 0.6757 - val_loss: 1.2032 - val_root_mean_squared_error: 1.0969
+Epoch 220/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4580 - root_mean_squared_error: 0.6768 - val_loss: 1.1579 - val_root_mean_squared_error: 1.0760
+Epoch 221/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4809 - root_mean_squared_error: 0.6935 - val_loss: 1.2829 - val_root_mean_squared_error: 1.1327
+Epoch 222/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 7ms/step - loss: 0.4548 - root_mean_squared_error: 0.6744 - val_loss: 1.1535 - val_root_mean_squared_error: 1.0740
+Epoch 223/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4647 - root_mean_squared_error: 0.6817 - val_loss: 1.1511 - val_root_mean_squared_error: 1.0729
+Epoch 224/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4545 - root_mean_squared_error: 0.6742 - val_loss: 1.1584 - val_root_mean_squared_error: 1.0763
+Epoch 225/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4583 - root_mean_squared_error: 0.6769 - val_loss: 1.1535 - val_root_mean_squared_error: 1.0740
+Epoch 226/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4751 - root_mean_squared_error: 0.6893 - val_loss: 1.4153 - val_root_mean_squared_error: 1.1896
+Epoch 227/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4660 - root_mean_squared_error: 0.6826 - val_loss: 1.1387 - val_root_mean_squared_error: 1.0671
+Epoch 228/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4518 - root_mean_squared_error: 0.6721 - val_loss: 1.2166 - val_root_mean_squared_error: 1.1030
+Epoch 229/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4742 - root_mean_squared_error: 0.6886 - val_loss: 1.2523 - val_root_mean_squared_error: 1.1191
+Epoch 230/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4483 - root_mean_squared_error: 0.6695 - val_loss: 1.2131 - val_root_mean_squared_error: 1.1014
+Epoch 231/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4516 - root_mean_squared_error: 0.6720 - val_loss: 1.2469 - val_root_mean_squared_error: 1.1166
+Epoch 232/300
+[1m75/75[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 6ms/step - loss: 0.4639 - root_mean_squared_error: 0.6811 - val_loss: 1.1625 - val_root_mean_squared_error: 1.0782
+/home/postdoc/.local/lib/python3.10/site-packages/keras/src/layers/layer.py:970: UserWarning: Layer 'conv1d_15' (of type Conv1D) was passed an input with a mask attached to it. However, this layer does not support masking and will therefore destroy the mask information. Downstream layers will not see the mask.
+  warnings.warn(
+[1m16/16[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 2ms/step
