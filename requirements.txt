@@ -4,3 +4,5 @@ selfies
 scikit-learn
 pandas
 torch  # keras backend
+selfies
+optuna
