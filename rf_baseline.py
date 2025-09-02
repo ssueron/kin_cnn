@@ -116,18 +116,38 @@ class ECFPRandomForest:
         metrics = {'rmse': [], 'r2': [], 'mae': []}
         
         for i in range(y_true.shape[1]):
+            # Only evaluate kinases that have trained models
+            if i not in self.models or self.models[i] is None:
+                continue
+                
             if mask is not None:
                 valid_idx = mask[:, i]
             else:
-                valid_idx = ~np.isnan(y_true[:, i]) & ~np.isnan(y_pred[:, i])
+                valid_idx = ~np.isnan(y_true[:, i])
+            
+            # Additional check to ensure predictions are not NaN
+            valid_idx = valid_idx & ~np.isnan(y_pred[:, i])
             
             if np.sum(valid_idx) > 0:
                 y_true_i = y_true[valid_idx, i]
                 y_pred_i = y_pred[valid_idx, i]
                 
-                metrics['rmse'].append(np.sqrt(mean_squared_error(y_true_i, y_pred_i)))
-                metrics['r2'].append(r2_score(y_true_i, y_pred_i))
-                metrics['mae'].append(mean_absolute_error(y_true_i, y_pred_i))
+                # Double check for NaN values before computing metrics
+                if not (np.any(np.isnan(y_true_i)) or np.any(np.isnan(y_pred_i))):
+                    metrics['rmse'].append(np.sqrt(mean_squared_error(y_true_i, y_pred_i)))
+                    metrics['r2'].append(r2_score(y_true_i, y_pred_i))
+                    metrics['mae'].append(mean_absolute_error(y_true_i, y_pred_i))
+        
+        # Return NaN if no valid metrics computed
+        if not metrics['rmse']:
+            return {
+                'rmse': np.nan,
+                'r2': np.nan,
+                'mae': np.nan,
+                'rmse_std': np.nan,
+                'r2_std': np.nan,
+                'mae_std': np.nan
+            }
         
         # Average metrics
         return {

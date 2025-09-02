@@ -81,6 +81,10 @@ def r2(gold_truths: List[float], predictions: List[float]) -> float:
     float
         $R^2$ (coefficient of determinant) score.
     """
+    # R² is undefined with fewer than 2 samples
+    if len(gold_truths) < 2:
+        return 0.0
+    
     return float(metrics.r2_score(gold_truths, predictions))
 
 

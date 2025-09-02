@@ -64,10 +64,14 @@ class MultiKinaseCNN(keras.Model):
                 filters=(layer_ix + 1) * n_filters,
                 kernel_size=kernel_size,
                 strides=1,
-                activation="relu",
+                activation=None,
                 padding="valid",
             )
             for layer_ix in range(n_layers)
+        ]
+        self.batch_norms = [
+            keras.layers.BatchNormalization()
+            for _ in range(n_layers)
         ]
         self.dropout_layer = keras.layers.Dropout(dropout)
         self.pooling = keras.layers.GlobalMaxPooling1D()
@@ -88,8 +92,10 @@ class MultiKinaseCNN(keras.Model):
 
     def call(self, inputs, training=None):
         x = self.embedding(inputs)
-        for conv in self.convs:
+        for conv, bn in zip(self.convs, self.batch_norms):
             x = conv(x)
+            x = bn(x, training=training)
+            x = keras.activations.relu(x)
             x = self.dropout_layer(x, training=training)
 
         x = self.pooling(x)
@@ -129,11 +135,18 @@ class MultiKinaseCNN(keras.Model):
         y_pred = keras.ops.convert_to_tensor(y_pred)
         mask = keras.ops.convert_to_tensor(mask)
         
-        # Calculate squared difference (manual MSE)
-        squared_diff = keras.ops.square(y_true - y_pred)  # (batch_size, n_kinases)
+        # Apply mask before computing loss to avoid NaN propagation
+        mask_float = keras.ops.cast(mask, dtype=y_true.dtype)
         
-        # Apply mask (set losses to 0 on masked values)
-        mask_float = keras.ops.cast(mask, dtype=squared_diff.dtype)
+        # Only compute squared difference on valid (non-masked) positions
+        # Set masked positions to 0 in both y_true and y_pred for computation
+        y_true_masked = keras.ops.where(mask, y_true, 0.0)
+        y_pred_masked = keras.ops.where(mask, y_pred, 0.0)
+        
+        # Calculate squared difference (manual MSE)
+        squared_diff = keras.ops.square(y_true_masked - y_pred_masked)  # (batch_size, n_kinases)
+        
+        # Apply mask to zero out invalid positions (redundant but explicit)
         masked_losses = squared_diff * mask_float
         
         # Calculate average only on non-masked values

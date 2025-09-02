@@ -34,7 +34,9 @@ def smiles_label_encoding(smiles: str, token_to_label: dict) -> List[int]:
         Returns:
             List[int]: list of integer encoding the SMILES string
     """
-    return [token_to_label[token] for token in segment_smiles(smiles)]
+    # Get UNK token ID, default to 1 if not found
+    unk_id = token_to_label.get("<UNK>", 1)
+    return [token_to_label.get(token, unk_id) for token in segment_smiles(smiles)]
 
 
 def selfies_label_encoding(selfies: str, token_to_label: dict) -> List[int]:

@@ -71,8 +71,19 @@ def kinase_csv_to_matrix_with_mask(
     df = pd.read_csv(csv_path)
     mask_df = pd.read_csv(mask_path)
     
+    # Detect SMILES column (smiles, curated_smiles, or molecule)
+    smiles_col = None
+    if "smiles" in df.columns:
+        smiles_col = "smiles"
+    elif "curated_smiles" in df.columns:
+        smiles_col = "curated_smiles"
+    elif "molecule" in df.columns:
+        smiles_col = "molecule"
+    else:
+        raise ValueError("No SMILES column found (smiles, curated_smiles, or molecule)")
+    
     # Extract molecules (SMILES)
-    X = df["curated_smiles"].values.tolist()
+    X = df[smiles_col].values.tolist()
     
     # Encode SMILES or SELFIES
     if representation_name == "smiles":
@@ -84,7 +95,7 @@ def kinase_csv_to_matrix_with_mask(
         else:
             import os
             base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-            vocab_path = os.path.join(base_dir, "data", "smiles_vocab.json")
+            vocab_path = os.path.join(base_dir, "data", "smiles_vocab_extended.json")
             with open(vocab_path) as f:
                 smiles_vocab = json.load(f)
             X = [sequence_utils.smiles_label_encoding(s, smiles_vocab) for s in X]
@@ -100,13 +111,16 @@ def kinase_csv_to_matrix_with_mask(
             f"Invalid representation name: {representation_name}. Choose from {'smiles', 'selfies'}."
         )
 
-    # Extract all kinase columns (all except 'curated_smiles')
-    kinase_columns = [col for col in df.columns if col != "curated_smiles"]
+    # Extract all kinase columns (all except SMILES column)
+    kinase_columns = [col for col in df.columns if col != smiles_col]
     y = df[kinase_columns].values.astype(np.float32)
     
     # Extract mask (same columns as y)
-    mask_columns = [col for col in mask_df.columns if col != "curated_smiles"]
+    mask_columns = [col for col in mask_df.columns if col != smiles_col]
     mask = mask_df[mask_columns].values.astype(bool)
+    
+    # Replace NaN values with 0 where mask is False (they'll be ignored anyway)
+    y = np.where(mask, y, 0.0)
     
     # Padding input sequences
     X = keras.preprocessing.sequence.pad_sequences(
@@ -158,7 +172,7 @@ def kinase_csv_to_matrix(
         else:
             import os
             base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-            vocab_path = os.path.join(base_dir, "data", "smiles_vocab.json")
+            vocab_path = os.path.join(base_dir, "data", "smiles_vocab_extended.json")
             with open(vocab_path) as f:
                 smiles_vocab = json.load(f)
             X = [sequence_utils.smiles_label_encoding(s, smiles_vocab) for s in X]

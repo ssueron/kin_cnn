@@ -110,7 +110,7 @@ def train_predictor(
         batch_size=batch_size,
         epochs=500,
         validation_data=(X_val, y_val),
-        verbose=0,
+        verbose=1,
         callbacks=callbacks,
         class_weight=class_weights,
     )

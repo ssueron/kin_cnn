@@ -1,0 +1,20 @@
+{
+  "strategy": "pretrain_only",
+  "experiment_name": "hpo_pretrain_only_0",
+  "token_encoding": "learnable",
+  "embedding_dim": 256,
+  "n_layers": 3,
+  "kernel_size": 3,
+  "n_filters": 256,
+  "dense_layer_size": 128,
+  "dropout": 0.1,
+  "learning_rate": 6.716782518858636e-05,
+  "batch_size": 256,
+  "pretrain_epochs": 60,
+  "finetune_epochs": 20,
+  "finetune_lr_multiplier": 0.1,
+  "augmentation_factor": 0,
+  "vocab_size": 100,
+  "maxlen": 200,
+  "vocab_path": null
+}

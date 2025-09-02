@@ -1,5 +1,6 @@
 import json
 import re
+import logging
 from typing import List, Tuple, Dict
 
 import keras
@@ -8,6 +9,8 @@ import pandas as pd
 
 from deepclp import metrics, sequence_utils
 from deepclp.models.multi_kinase_cnn import MultiKinaseCNN
+
+logger = logging.getLogger(__name__)
 
 
 def custom_smiles_encoding(smiles: str, vocab: dict) -> List[int]:
@@ -71,8 +74,19 @@ def kinase_csv_to_matrix_with_mask(
     df = pd.read_csv(csv_path)
     mask_df = pd.read_csv(mask_path)
     
+    # Detect SMILES column (smiles, curated_smiles, or molecule)
+    smiles_col = None
+    if "smiles" in df.columns:
+        smiles_col = "smiles"
+    elif "curated_smiles" in df.columns:
+        smiles_col = "curated_smiles"
+    elif "molecule" in df.columns:
+        smiles_col = "molecule"
+    else:
+        raise ValueError("No SMILES column found (smiles, curated_smiles, or molecule)")
+    
     # Extract molecules (SMILES)
-    X = df["curated_smiles"].values.tolist()
+    X = df[smiles_col].values.tolist()
     
     # Encode SMILES or SELFIES
     if representation_name == "smiles":
@@ -84,7 +98,7 @@ def kinase_csv_to_matrix_with_mask(
         else:
             import os
             base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-            vocab_path = os.path.join(base_dir, "data", "smiles_vocab.json")
+            vocab_path = os.path.join(base_dir, "data", "smiles_vocab_extended.json")
             with open(vocab_path) as f:
                 smiles_vocab = json.load(f)
             X = [sequence_utils.smiles_label_encoding(s, smiles_vocab) for s in X]
@@ -100,12 +114,12 @@ def kinase_csv_to_matrix_with_mask(
             f"Invalid representation name: {representation_name}. Choose from {'smiles', 'selfies'}."
         )
 
-    # Extract all kinase columns (all except 'curated_smiles')
-    kinase_columns = [col for col in df.columns if col != "curated_smiles"]
+    # Extract all kinase columns (all except SMILES column)
+    kinase_columns = [col for col in df.columns if col != smiles_col]
     y = df[kinase_columns].values.astype(np.float32)
     
     # Extract mask (same columns as y)
-    mask_columns = [col for col in mask_df.columns if col != "curated_smiles"]
+    mask_columns = [col for col in mask_df.columns if col != smiles_col]
     mask = mask_df[mask_columns].values.astype(bool)
     
     # Padding input sequences
@@ -158,7 +172,7 @@ def kinase_csv_to_matrix(
         else:
             import os
             base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-            vocab_path = os.path.join(base_dir, "data", "smiles_vocab.json")
+            vocab_path = os.path.join(base_dir, "data", "smiles_vocab_extended.json")
             with open(vocab_path) as f:
                 smiles_vocab = json.load(f)
             X = [sequence_utils.smiles_label_encoding(s, smiles_vocab) for s in X]
@@ -227,8 +241,9 @@ def train_multikinase_predictor_with_mask(
     best_val_loss = float('inf')
     patience = 10
     patience_counter = 0
+    min_delta = 1e-4
     
-    print(f"Starting training for {epochs} epochs...")
+    logger.info(f"Starting training for {epochs} epochs...")
     
     for epoch in range(epochs):
         # Training phase
@@ -281,16 +296,16 @@ def train_multikinase_predictor_with_mask(
         history["loss"].append(avg_train_loss)
         history["val_loss"].append(avg_val_loss)
         
-        print(f"Epoch {epoch+1}/{epochs} - Loss: {avg_train_loss:.4f} - Val Loss: {avg_val_loss:.4f}")
+        logger.info(f"Epoch {epoch+1}/{epochs} - Loss: {avg_train_loss:.4f} - Val Loss: {avg_val_loss:.4f}")
         
-        # Early stopping
-        if avg_val_loss < best_val_loss:
+        # Early stopping with plateau detection
+        if avg_val_loss < (best_val_loss - min_delta):
             best_val_loss = avg_val_loss
             patience_counter = 0
         else:
             patience_counter += 1
             if patience_counter >= patience:
-                print(f"Early stopping at epoch {epoch+1}")
+                logger.info(f"Early stopping at epoch {epoch+1}")
                 break
     
     return history
@@ -366,6 +381,7 @@ def evaluate_multikinase_predictor(
     model: MultiKinaseCNN,
     X_test: np.ndarray,
     y_test: np.ndarray,
+    mask_test: np.ndarray = None,
 ) -> Dict[str, float]:
     """Evaluates a multi-kinase predictor.
 
@@ -373,6 +389,7 @@ def evaluate_multikinase_predictor(
         model (MultiKinaseCNN): Model to evaluate.
         X_test (np.ndarray): Test input matrix.
         y_test (np.ndarray): Test output matrix.
+        mask_test (np.ndarray): Test mask matrix (True = valid value).
 
     Returns:
         Dict[str, float]: Evaluation metrics.
@@ -382,19 +399,40 @@ def evaluate_multikinase_predictor(
     # Calculate metrics for each kinase
     kinase_metrics = []
     for i in range(model.n_kinases):
+        y_true_kinase = y_test[:, i]
+        y_pred_kinase = predictions[:, i]
+        
+        # Apply mask if provided
+        if mask_test is not None:
+            mask_kinase = mask_test[:, i]
+            # Only evaluate on valid (non-masked) values
+            valid_indices = mask_kinase
+            y_true_kinase = y_true_kinase[valid_indices]
+            y_pred_kinase = y_pred_kinase[valid_indices]
+        
+        # Skip kinases with insufficient data points (need at least 2 for R²)
+        if len(y_true_kinase) < 2 or np.isnan(y_true_kinase).all() or np.isnan(y_pred_kinase).all():
+            kinase_metrics.append({"rmse": np.nan, "r2": np.nan, "mse": np.nan})
+            continue
+            
         kinase_metrics.append(
             metrics.evaluate_predictions(
-                y_test[:, i],
-                predictions[:, i],
+                y_true_kinase,
+                y_pred_kinase,
                 metrics=["rmse", "r2", "mse"]
             )
         )
     
-    # Calculate average metrics across all kinases
+    # Calculate average metrics across all kinases with valid data
+    # Filter out kinases that had insufficient samples (those with NaN values)
+    valid_kinases = [m for m in kinase_metrics if not (np.isnan(m["rmse"]) or np.isnan(m["r2"]) or np.isnan(m["mse"]))]
+    if len(valid_kinases) == 0:
+        return {"rmse": np.nan, "r2": np.nan, "mse": np.nan}
+    
     avg_metrics = {
-        "rmse": sum(m["rmse"] for m in kinase_metrics) / model.n_kinases,
-        "r2": sum(m["r2"] for m in kinase_metrics) / model.n_kinases,
-        "mse": sum(m["mse"] for m in kinase_metrics) / model.n_kinases,
+        "rmse": np.mean([m["rmse"] for m in valid_kinases]),
+        "r2": np.mean([m["r2"] for m in valid_kinases]),
+        "mse": np.mean([m["mse"] for m in valid_kinases]),
     }
     
     return avg_metrics

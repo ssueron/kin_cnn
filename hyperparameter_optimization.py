@@ -1,6 +1,7 @@
 import optuna
 import json
 import numpy as np
+import tensorflow as tf
 from pathlib import Path
 from experiment_runner import ExperimentRunner
 
@@ -38,13 +39,15 @@ def create_objective(strategy: str, dataset: str = "finetune"):
         }
         
         try:
+            print(f"\nStarting trial {trial.number} for {strategy}...")
             runner = ExperimentRunner(config)
             model, metrics = runner.run()
+            print(f"Trial {trial.number} completed - R2: {metrics['r2']:.4f}")
             
             # Return negative R2 (we want to maximize R2, Optuna minimizes)
             return -metrics['r2']
             
-        except Exception as e:
+        except (ValueError, RuntimeError, tf.errors.ResourceExhaustedError) as e:
             print(f"Trial {trial.number} failed: {e}")
             return float('inf')
     

@@ -8,6 +8,7 @@ import optuna
 from typing import Dict, Any, Optional, Tuple
 import tensorflow as tf
 
+from setup_environment import setup_tf_environment
 from deepclp.models.multi_kinase_cnn import MultiKinaseCNN
 from deepclp.kinase_training import (
     kinase_csv_to_matrix_with_mask,
@@ -43,6 +44,10 @@ class ExperimentTracker:
 
 class ExperimentRunner:
     def __init__(self, config: Dict):
+        # Setup TensorFlow environment first
+        force_cpu = config.get('force_cpu', False)
+        setup_tf_environment(force_cpu=force_cpu, verbose=True)
+        
         self.config = config
         self.tracker = ExperimentTracker(config['experiment_name'])
         self.tracker.log_config(config)
@@ -86,14 +91,33 @@ class ExperimentRunner:
         """Augment SMILES data using RDKit enumeration"""
         from rdkit import Chem
         import random
+        import gc
         
         df = pd.read_csv(csv_path)
-        augmented_X, augmented_y, augmented_mask = [], [], []
         
-        for i, smiles in enumerate(df['curated_smiles'].values):
-            augmented_X.append(X[i])
-            augmented_y.append(y[i])
-            augmented_mask.append(mask[i])
+        # Detect SMILES column (smiles, curated_smiles, or molecule)
+        if 'smiles' in df.columns:
+            smiles_col = 'smiles'
+        elif 'curated_smiles' in df.columns:
+            smiles_col = 'curated_smiles'
+        elif 'molecule' in df.columns:
+            smiles_col = 'molecule'
+        else:
+            raise ValueError(f"No SMILES column found in {csv_path}. Expected 'smiles', 'curated_smiles', or 'molecule'")
+        
+        # Pre-allocate arrays
+        total_size = len(df) * factor
+        augmented_X = np.zeros((total_size, X.shape[1]), dtype=X.dtype)
+        augmented_y = np.zeros((total_size, y.shape[1]), dtype=y.dtype)
+        augmented_mask = np.zeros((total_size, mask.shape[1]), dtype=mask.dtype)
+        
+        idx = 0
+        for i, smiles in enumerate(df[smiles_col].values):
+            # Add original
+            augmented_X[idx] = X[i]
+            augmented_y[idx] = y[i]
+            augmented_mask[idx] = mask[i]
+            idx += 1
             
             try:
                 mol = Chem.MolFromSmiles(smiles)
@@ -115,13 +139,22 @@ class ExperimentRunner:
                             [aug_encoded], padding="post", maxlen=self.config['maxlen'], value=0
                         )[0]
                         
-                        augmented_X.append(aug_encoded)
-                        augmented_y.append(y[i])
-                        augmented_mask.append(mask[i])
-            except:
+                        augmented_X[idx] = aug_encoded
+                        augmented_y[idx] = y[i]
+                        augmented_mask[idx] = mask[i]
+                        idx += 1
+            except (ValueError, TypeError, AttributeError) as e:
                 continue
-                
-        return np.array(augmented_X), np.array(augmented_y), np.array(augmented_mask)
+        
+        # Trim to actual size and cleanup
+        result_X = augmented_X[:idx].copy()
+        result_y = augmented_y[:idx].copy()
+        result_mask = augmented_mask[:idx].copy()
+        
+        del augmented_X, augmented_y, augmented_mask, df
+        gc.collect()
+        
+        return result_X, result_y, result_mask
     
     def create_model(self, n_kinases: int = 318) -> MultiKinaseCNN:
         """Create model with current config"""
@@ -143,7 +176,8 @@ class ExperimentRunner:
         print("Running Strategy: Pretrain Only")
         data = self.load_data("pretrain", self.config['augmentation_factor'])
         
-        model = self.create_model()
+        n_kinases = data['y_train'].shape[1]
+        model = self.create_model(n_kinases)
         history = train_multikinase_predictor_with_mask(
             model=model,
             X_train=data['X_train'],
@@ -162,7 +196,7 @@ class ExperimentRunner:
         
         # Evaluate
         test_metrics = evaluate_multikinase_predictor(
-            model, data['X_test'], data['y_test']
+            model, data['X_test'], data['y_test'], data['mask_test']
         )
         self.tracker.log_metrics(test_metrics, "pretrain_test")
         
@@ -173,7 +207,8 @@ class ExperimentRunner:
         print("Running Strategy: Finetune Only")
         data = self.load_data("finetune", self.config['augmentation_factor'])
         
-        model = self.create_model()
+        n_kinases = data['y_train'].shape[1]
+        model = self.create_model(n_kinases)
         history = train_multikinase_predictor_with_mask(
             model=model,
             X_train=data['X_train'],
@@ -192,7 +227,7 @@ class ExperimentRunner:
         
         # Evaluate
         test_metrics = evaluate_multikinase_predictor(
-            model, data['X_test'], data['y_test']
+            model, data['X_test'], data['y_test'], data['mask_test']
         )
         self.tracker.log_metrics(test_metrics, "finetune_test")
         
@@ -204,7 +239,8 @@ class ExperimentRunner:
         
         # Stage 1: Pretrain
         pretrain_data = self.load_data("pretrain", self.config['augmentation_factor'])
-        model = self.create_model()
+        n_kinases = pretrain_data['y_train'].shape[1]
+        model = self.create_model(n_kinases)
         
         history_pretrain = train_multikinase_predictor_with_mask(
             model=model,
@@ -244,10 +280,10 @@ class ExperimentRunner:
         
         # Evaluate on both test sets
         pretrain_test_metrics = evaluate_multikinase_predictor(
-            model, pretrain_data['X_test'], pretrain_data['y_test']
+            model, pretrain_data['X_test'], pretrain_data['y_test'], pretrain_data['mask_test']
         )
         finetune_test_metrics = evaluate_multikinase_predictor(
-            model, finetune_data['X_test'], finetune_data['y_test']
+            model, finetune_data['X_test'], finetune_data['y_test'], finetune_data['mask_test']
         )
         
         self.tracker.log_metrics({
@@ -263,7 +299,8 @@ class ExperimentRunner:
         
         # Stage 1: Pretrain
         pretrain_data = self.load_data("pretrain", self.config['augmentation_factor'])
-        model = self.create_model()
+        n_kinases = pretrain_data['y_train'].shape[1]
+        model = self.create_model(n_kinases)
         
         history_pretrain = train_multikinase_predictor_with_mask(
             model=model,
@@ -307,7 +344,7 @@ class ExperimentRunner:
         
         # Evaluate
         finetune_test_metrics = evaluate_multikinase_predictor(
-            model, finetune_data['X_test'], finetune_data['y_test']
+            model, finetune_data['X_test'], finetune_data['y_test'], finetune_data['mask_test']
         )
         self.tracker.log_metrics(finetune_test_metrics, "transfer_frozen_test")
         

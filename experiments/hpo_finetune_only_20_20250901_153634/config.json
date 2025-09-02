@@ -1,0 +1,20 @@
+{
+  "strategy": "finetune_only",
+  "experiment_name": "hpo_finetune_only_20",
+  "token_encoding": "learnable",
+  "embedding_dim": 256,
+  "n_layers": 2,
+  "kernel_size": 7,
+  "n_filters": 32,
+  "dense_layer_size": 1024,
+  "dropout": 0.30000000000000004,
+  "learning_rate": 1.910220981886295e-05,
+  "batch_size": 64,
+  "pretrain_epochs": 50,
+  "finetune_epochs": 20,
+  "finetune_lr_multiplier": 0.1,
+  "augmentation_factor": 10,
+  "vocab_size": 100,
+  "maxlen": 200,
+  "vocab_path": null
+}

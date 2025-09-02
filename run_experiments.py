@@ -25,18 +25,19 @@ DEFAULT_CONFIG = {
     'finetune_epochs': 30,
     'finetune_lr_multiplier': 0.1,
     'augmentation_factor': 0,
-    'vocab_size': 100,
+    'vocab_size': 53,
     'maxlen': 200,
     'vocab_path': None
 }
 
-def quick_test():
+def quick_test(force_cpu=False):
     """Run quick test with small epochs to verify everything works"""
     test_config = DEFAULT_CONFIG.copy()
     test_config.update({
         'pretrain_epochs': 2,
         'finetune_epochs': 2,
-        'experiment_name': 'quick_test'
+        'experiment_name': 'quick_test',
+        'force_cpu': force_cpu
     })
     
     print("Running quick test to verify setup...")
@@ -181,21 +182,23 @@ def main():
     
     if len(sys.argv) < 2:
         print("Usage:")
-        print("  python run_experiments.py test        # Quick test")
-        print("  python run_experiments.py baseline    # Run baseline experiments")
-        print("  python run_experiments.py hpo [n]     # Run HPO with n trials (default 30)")
-        print("  python run_experiments.py rf          # Train RF baselines")
-        print("  python run_experiments.py all         # Run everything")
-        print("  python run_experiments.py report      # Generate final report")
+        print("  python run_experiments.py test [--cpu]   # Quick test")
+        print("  python run_experiments.py baseline       # Run baseline experiments")
+        print("  python run_experiments.py hpo [n]        # Run HPO with n trials (default 30)")
+        print("  python run_experiments.py rf             # Train RF baselines")
+        print("  python run_experiments.py all            # Run everything")
+        print("  python run_experiments.py report         # Generate final report")
+        print("  Add --cpu to any command to force CPU usage")
         return
     
     command = sys.argv[1]
+    force_cpu = '--cpu' in sys.argv
     
     # Create experiments directory
     Path("experiments").mkdir(exist_ok=True)
     
     if command == "test":
-        quick_test()
+        quick_test(force_cpu=force_cpu)
     
     elif command == "baseline":
         run_baseline_experiments()
