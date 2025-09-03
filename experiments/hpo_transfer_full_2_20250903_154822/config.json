@@ -1,0 +1,20 @@
+{
+  "strategy": "transfer_full",
+  "experiment_name": "hpo_transfer_full_2",
+  "token_encoding": "learnable",
+  "embedding_dim": 128,
+  "n_layers": 5,
+  "kernel_size": 7,
+  "n_filters": 64,
+  "dense_layer_size": 512,
+  "dropout": 0.30000000000000004,
+  "learning_rate": 0.004264199967916561,
+  "batch_size": 128,
+  "pretrain_epochs": 30,
+  "finetune_epochs": 30,
+  "finetune_lr_multiplier": 0.4880432828854546,
+  "augmentation_factor": 0,
+  "vocab_size": 100,
+  "maxlen": 200,
+  "vocab_path": null
+}

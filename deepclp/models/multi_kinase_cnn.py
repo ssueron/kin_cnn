@@ -92,6 +92,7 @@ class MultiKinaseCNN(keras.Model):
 
     def call(self, inputs, training=None):
         x = self.embedding(inputs)
+        x._keras_mask = None
         for conv, bn in zip(self.convs, self.batch_norms):
             x = conv(x)
             x = bn(x, training=training)
