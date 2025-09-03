@@ -131,7 +131,7 @@ class ExperimentRunner:
                                 vocab = json.load(f)
                             aug_encoded = custom_smiles_encoding(aug_smiles, vocab)
                         else:
-                            with open('data/smiles_vocab.json') as f:
+                            with open('data/smiles_vocab_extended.json') as f:
                                 vocab = json.load(f)
                             aug_encoded = sequence_utils.smiles_label_encoding(aug_smiles, vocab)
                         

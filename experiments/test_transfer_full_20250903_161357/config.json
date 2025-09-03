@@ -1,0 +1,21 @@
+{
+  "token_encoding": "learnable",
+  "embedding_dim": 128,
+  "n_layers": 3,
+  "kernel_size": 5,
+  "n_filters": 128,
+  "dense_layer_size": 512,
+  "dropout": 0.3,
+  "learning_rate": 0.001,
+  "batch_size": 64,
+  "pretrain_epochs": 2,
+  "finetune_epochs": 2,
+  "finetune_lr_multiplier": 0.1,
+  "augmentation_factor": 0,
+  "vocab_size": 53,
+  "maxlen": 200,
+  "vocab_path": null,
+  "experiment_name": "test_transfer_full",
+  "force_cpu": false,
+  "strategy": "transfer_full"
+}

@@ -33,7 +33,7 @@ def create_objective(strategy: str, dataset: str = "finetune"):
             'augmentation_factor': trial.suggest_categorical('augmentation_factor', [0, 5, 10]),
             
             # Fixed params
-            'vocab_size': 100,
+            'vocab_size': 53,
             'maxlen': 200,
             'vocab_path': None
         }
@@ -57,7 +57,17 @@ def optimize_strategy(strategy: str, n_trials: int = 50):
     """Run HPO for a specific strategy"""
     
     study_name = f"{strategy}_optimization"
-    storage_path = f"sqlite:///experiments/hpo_{strategy}.db"
+    db_path = Path(f"experiments/hpo_{strategy}.db")
+    
+    # Ensure experiments directory exists with proper permissions
+    db_path.parent.mkdir(exist_ok=True)
+    
+    # Create database file with write permissions if it doesn't exist
+    if not db_path.exists():
+        db_path.touch()
+        db_path.chmod(0o664)  # rw-rw-r--
+    
+    storage_path = f"sqlite:///{db_path}"
     
     study = optuna.create_study(
         study_name=study_name,
@@ -132,7 +142,7 @@ def run_best_models():
                 'strategy': strategy,
                 'experiment_name': f"{strategy}_best_final",
                 'token_encoding': 'learnable',
-                'vocab_size': 100,
+                'vocab_size': 53,
                 'maxlen': 200,
                 'vocab_path': None
             }
