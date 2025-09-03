@@ -6,6 +6,7 @@ from typing import List, Tuple, Dict
 import keras
 import numpy as np
 import pandas as pd
+from scipy.stats import pearsonr, spearmanr
 
 from deepclp import metrics, sequence_utils
 from deepclp.models.multi_kinase_cnn import MultiKinaseCNN
@@ -311,6 +312,25 @@ def train_multikinase_predictor_with_mask(
     return history
 
 
+def spearman_r(y_true, y_pred):
+    if len(y_true) < 2 or np.var(y_true) == 0 or np.var(y_pred) == 0:
+        return np.nan
+    return spearmanr(y_true, y_pred)[0]
+
+
+def pearson_r(y_true, y_pred):
+    if len(y_true) < 2 or np.var(y_true) == 0 or np.var(y_pred) == 0:
+        return np.nan
+    return pearsonr(y_true, y_pred)[0]
+
+
+def per_kinase_r2(y_true, y_pred):
+    from sklearn.metrics import r2_score
+    if len(y_true) < 2:
+        return np.nan
+    return r2_score(y_true, y_pred)
+
+
 def train_multikinase_predictor(
     model: MultiKinaseCNN,
     X_train: np.ndarray,
@@ -396,8 +416,10 @@ def evaluate_multikinase_predictor(
     """
     predictions = model.predict(X_test)
     
-    # Calculate metrics for each kinase
+    # Calculate per-kinase metrics
     kinase_metrics = []
+    kinase_r2_values = []
+    
     for i in range(model.n_kinases):
         y_true_kinase = y_test[:, i]
         y_pred_kinase = predictions[:, i]
@@ -405,34 +427,57 @@ def evaluate_multikinase_predictor(
         # Apply mask if provided
         if mask_test is not None:
             mask_kinase = mask_test[:, i]
-            # Only evaluate on valid (non-masked) values
             valid_indices = mask_kinase
             y_true_kinase = y_true_kinase[valid_indices]
             y_pred_kinase = y_pred_kinase[valid_indices]
         
-        # Skip kinases with insufficient data points (need at least 2 for R²)
+        # Skip kinases with insufficient data points
         if len(y_true_kinase) < 2 or np.isnan(y_true_kinase).all() or np.isnan(y_pred_kinase).all():
             kinase_metrics.append({"rmse": np.nan, "r2": np.nan, "mse": np.nan})
+            kinase_r2_values.append(np.nan)
             continue
             
-        kinase_metrics.append(
-            metrics.evaluate_predictions(
-                y_true_kinase,
-                y_pred_kinase,
-                metrics=["rmse", "r2", "mse"]
-            )
+        kinase_metric = metrics.evaluate_predictions(
+            y_true_kinase, y_pred_kinase, metrics=["rmse", "r2", "mse"]
         )
+        kinase_metrics.append(kinase_metric)
+        kinase_r2_values.append(kinase_metric["r2"])
     
-    # Calculate average metrics across all kinases with valid data
-    # Filter out kinases that had insufficient samples (those with NaN values)
+    # Calculate profile-level correlations (per molecule)
+    profile_pearson = []
+    profile_spearman = []
+    
+    for i in range(len(X_test)):
+        y_true_mol = y_test[i, :]
+        y_pred_mol = predictions[i, :]
+        
+        if mask_test is not None:
+            mask_mol = mask_test[i, :]
+            valid_idx = mask_mol & ~np.isnan(y_true_mol) & ~np.isnan(y_pred_mol)
+        else:
+            valid_idx = ~np.isnan(y_true_mol) & ~np.isnan(y_pred_mol)
+        
+        if np.sum(valid_idx) > 1:
+            profile_pearson.append(pearson_r(y_true_mol[valid_idx], y_pred_mol[valid_idx]))
+            profile_spearman.append(spearman_r(y_true_mol[valid_idx], y_pred_mol[valid_idx]))
+    
+    # Filter valid kinases for averaging
     valid_kinases = [m for m in kinase_metrics if not (np.isnan(m["rmse"]) or np.isnan(m["r2"]) or np.isnan(m["mse"]))]
-    if len(valid_kinases) == 0:
-        return {"rmse": np.nan, "r2": np.nan, "mse": np.nan}
+    valid_r2_values = [r2 for r2 in kinase_r2_values if not np.isnan(r2)]
     
+    if len(valid_kinases) == 0:
+        return {"rmse": np.nan, "r2": np.nan, "mse": np.nan, "profile_pearson": np.nan, "profile_spearman": np.nan}
+    
+    # Aggregate metrics
     avg_metrics = {
         "rmse": np.mean([m["rmse"] for m in valid_kinases]),
         "r2": np.mean([m["r2"] for m in valid_kinases]),
         "mse": np.mean([m["mse"] for m in valid_kinases]),
+        "profile_pearson": np.nanmean(profile_pearson) if profile_pearson else np.nan,
+        "profile_spearman": np.nanmean(profile_spearman) if profile_spearman else np.nan,
+        "per_kinase_r2_mean": np.mean(valid_r2_values) if valid_r2_values else np.nan,
+        "per_kinase_r2_std": np.std(valid_r2_values) if valid_r2_values else np.nan,
+        "per_kinase_r2_values": valid_r2_values
     }
     
     return avg_metrics

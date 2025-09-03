@@ -42,7 +42,16 @@ def create_objective(strategy: str, dataset: str = "finetune"):
             print(f"\nStarting trial {trial.number} for {strategy}...")
             runner = ExperimentRunner(config)
             model, metrics = runner.run()
-            print(f"Trial {trial.number} completed - R2: {metrics['r2']:.4f}")
+            print(f"Trial {trial.number} completed - R2: {metrics['r2']:.4f}, Profile Pearson: {metrics.get('profile_pearson', 'N/A'):.4f}")
+            
+            # Store detailed metrics in trial
+            trial.set_user_attr('r2', metrics['r2'])
+            trial.set_user_attr('rmse', metrics['rmse'])
+            trial.set_user_attr('mse', metrics['mse'])
+            trial.set_user_attr('profile_pearson', metrics.get('profile_pearson', np.nan))
+            trial.set_user_attr('profile_spearman', metrics.get('profile_spearman', np.nan))
+            trial.set_user_attr('per_kinase_r2_mean', metrics.get('per_kinase_r2_mean', np.nan))
+            trial.set_user_attr('per_kinase_r2_std', metrics.get('per_kinase_r2_std', np.nan))
             
             # Return negative R2 (we want to maximize R2, Optuna minimizes)
             return -metrics['r2']
@@ -80,10 +89,17 @@ def optimize_strategy(strategy: str, n_trials: int = 50):
     objective = create_objective(strategy)
     study.optimize(objective, n_trials=n_trials, n_jobs=1)
     
+    # Get best trial metrics
+    best_trial = study.best_trial
+    best_metrics = {}
+    if hasattr(best_trial, 'user_attrs'):
+        best_metrics = best_trial.user_attrs
+    
     # Save results
     results = {
         'best_params': study.best_params,
         'best_value': -study.best_value,  # Convert back to R2
+        'best_metrics': best_metrics,
         'n_trials': len(study.trials),
         'strategy': strategy
     }
@@ -156,7 +172,11 @@ def run_best_models():
                 'strategy': strategy,
                 'rmse': metrics['rmse'],
                 'r2': metrics['r2'],
-                'mse': metrics['mse']
+                'mse': metrics['mse'],
+                'profile_pearson': metrics.get('profile_pearson', np.nan),
+                'profile_spearman': metrics.get('profile_spearman', np.nan),
+                'per_kinase_r2_mean': metrics.get('per_kinase_r2_mean', np.nan),
+                'per_kinase_r2_std': metrics.get('per_kinase_r2_std', np.nan)
             })
             
         except FileNotFoundError:
