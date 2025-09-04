@@ -42,6 +42,8 @@ def create_objective(strategy: str, dataset: str = "finetune"):
             print(f"\nStarting trial {trial.number} for {strategy}...")
             runner = ExperimentRunner(config)
             model, metrics = runner.run()
+            # Convert numpy types to Python types
+            metrics = {k: float(v) if isinstance(v, np.floating) else int(v) if isinstance(v, np.integer) else v for k, v in metrics.items()}
             print(f"Trial {trial.number} completed - R2: {metrics['r2']:.4f}, Profile Pearson: {metrics.get('profile_pearson', 'N/A'):.4f}")
             
             # Store detailed metrics in trial
@@ -52,6 +54,8 @@ def create_objective(strategy: str, dataset: str = "finetune"):
             trial.set_user_attr('profile_spearman', metrics.get('profile_spearman', np.nan))
             trial.set_user_attr('per_kinase_r2_mean', metrics.get('per_kinase_r2_mean', np.nan))
             trial.set_user_attr('per_kinase_r2_std', metrics.get('per_kinase_r2_std', np.nan))
+            trial.set_user_attr('per_kinase_r2_dict', metrics.get('per_kinase_r2_dict', {}))
+            trial.set_user_attr('per_kinase_rmse_dict', metrics.get('per_kinase_rmse_dict', {}))
             
             # Return negative R2 (we want to maximize R2, Optuna minimizes)
             return -metrics['r2']
@@ -176,7 +180,9 @@ def run_best_models():
                 'profile_pearson': metrics.get('profile_pearson', np.nan),
                 'profile_spearman': metrics.get('profile_spearman', np.nan),
                 'per_kinase_r2_mean': metrics.get('per_kinase_r2_mean', np.nan),
-                'per_kinase_r2_std': metrics.get('per_kinase_r2_std', np.nan)
+                'per_kinase_r2_std': metrics.get('per_kinase_r2_std', np.nan),
+                'per_kinase_r2_dict': metrics.get('per_kinase_r2_dict', {}),
+                'per_kinase_rmse_dict': metrics.get('per_kinase_rmse_dict', {})
             })
             
         except FileNotFoundError:

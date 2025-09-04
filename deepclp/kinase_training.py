@@ -59,7 +59,7 @@ def kinase_csv_to_matrix_with_mask(
     representation_name: str,
     maxlen: int,
     custom_vocab_path: str = None,
-) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+) -> Tuple[np.ndarray, np.ndarray, np.ndarray, List[str]]:
     """Converts a CSV file to matrices with mask for multi-kinase training.
 
     Args:
@@ -70,7 +70,7 @@ def kinase_csv_to_matrix_with_mask(
         custom_vocab_path (str): Path to custom vocabulary (optional).
 
     Returns:
-        Tuple[np.ndarray, np.ndarray, np.ndarray]: X, y, and mask matrices.
+        Tuple[np.ndarray, np.ndarray, np.ndarray, List[str]]: X, y, mask matrices, and kinase names.
     """
     df = pd.read_csv(csv_path)
     mask_df = pd.read_csv(mask_path)
@@ -128,7 +128,7 @@ def kinase_csv_to_matrix_with_mask(
         X, padding="post", maxlen=maxlen, value=0
     )
     
-    return X, y, mask
+    return X, y, mask, kinase_columns
 
 
 def kinase_csv_to_matrix(
@@ -402,6 +402,7 @@ def evaluate_multikinase_predictor(
     X_test: np.ndarray,
     y_test: np.ndarray,
     mask_test: np.ndarray = None,
+    kinase_names: List[str] = None,
 ) -> Dict[str, float]:
     """Evaluates a multi-kinase predictor.
 
@@ -419,6 +420,8 @@ def evaluate_multikinase_predictor(
     # Calculate per-kinase metrics
     kinase_metrics = []
     kinase_r2_values = []
+    kinase_r2_dict = {}
+    kinase_rmse_dict = {}
     
     for i in range(model.n_kinases):
         y_true_kinase = y_test[:, i]
@@ -435,6 +438,9 @@ def evaluate_multikinase_predictor(
         if len(y_true_kinase) < 2 or np.isnan(y_true_kinase).all() or np.isnan(y_pred_kinase).all():
             kinase_metrics.append({"rmse": np.nan, "r2": np.nan, "mse": np.nan})
             kinase_r2_values.append(np.nan)
+            if kinase_names and i < len(kinase_names):
+                kinase_r2_dict[kinase_names[i]] = np.nan
+                kinase_rmse_dict[kinase_names[i]] = np.nan
             continue
             
         kinase_metric = metrics.evaluate_predictions(
@@ -442,6 +448,9 @@ def evaluate_multikinase_predictor(
         )
         kinase_metrics.append(kinase_metric)
         kinase_r2_values.append(kinase_metric["r2"])
+        if kinase_names and i < len(kinase_names):
+            kinase_r2_dict[kinase_names[i]] = kinase_metric["r2"]
+            kinase_rmse_dict[kinase_names[i]] = kinase_metric["rmse"]
     
     # Calculate profile-level correlations (per molecule)
     profile_pearson = []
@@ -477,7 +486,9 @@ def evaluate_multikinase_predictor(
         "profile_spearman": np.nanmean(profile_spearman) if profile_spearman else np.nan,
         "per_kinase_r2_mean": np.mean(valid_r2_values) if valid_r2_values else np.nan,
         "per_kinase_r2_std": np.std(valid_r2_values) if valid_r2_values else np.nan,
-        "per_kinase_r2_values": valid_r2_values
+        "per_kinase_r2_values": valid_r2_values,
+        "per_kinase_r2_dict": kinase_r2_dict,
+        "per_kinase_rmse_dict": kinase_rmse_dict
     }
     
     return avg_metrics
